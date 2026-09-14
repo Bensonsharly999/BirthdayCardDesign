@@ -11,7 +11,7 @@ export function LoadingOverlay({ progress, name, status }) {
         />
         <p className="font-display text-2xl font-extrabold">Designing cards for {name}</p>
         <p className="mt-2 text-sm text-white/60">
-          {status || 'Keeping only you in the photo, then placing you into 20 templates. The first time may take a minute.'}
+          {status || 'Keeping only you in the photo, then placing you into 25 templates. The first time may take a minute.'}
         </p>
         <div className="mt-6 h-2 overflow-hidden rounded-full bg-white/10">
           <motion.div

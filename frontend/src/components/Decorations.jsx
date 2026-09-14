@@ -167,6 +167,26 @@ function Decoration({ item, canvas }) {
       return <BotanicalCorners {...item} canvas={canvas} />;
     case 'gold-dots':
       return <GoldDots {...item} canvas={canvas} />;
+    case 'envelope-scene':
+      return <EnvelopeScene {...item} canvas={canvas} />;
+    case 'balloon-column':
+      return <BalloonColumn {...item} />;
+    case 'party-cake':
+      return <PartyCake {...item} />;
+    case 'drip-cake':
+      return <DripCake {...item} />;
+    case 'layer-cake':
+      return <LayerCake {...item} />;
+    case 'table-band':
+      return (
+        <Rect
+          x={0}
+          y={item.y}
+          width={canvas.width}
+          height={canvas.height - item.y}
+          fill={item.color || '#F4A5C0'}
+        />
+      );
     default:
       return null;
   }
@@ -1096,6 +1116,173 @@ function GoldDots({ count = 40, seed = 2, canvas, color = '#D4AF37' }) {
           fill={color}
           opacity={0.35 + rng() * 0.5}
         />
+      ))}
+    </Group>
+  );
+}
+
+function EnvelopeScene({ canvas, flap = '#F7F1EA', card = '#FFFFFF' }) {
+  const w = canvas.width;
+  return (
+    <Group listening={false}>
+      <Rect x={36} y={118} width={w - 72} height={canvas.height - 154} fill={card} cornerRadius={6} shadowBlur={18} shadowColor="rgba(80,60,40,0.16)" />
+      <Line
+        closed
+        points={[36, 118, w / 2, 28, w - 36, 118]}
+        fill={flap}
+        stroke="#E8D9C8"
+        strokeWidth={2}
+      />
+      <Line points={[36, 118, w - 36, 118]} stroke="#E4D5C4" strokeWidth={2} />
+      <Circle x={w / 2} y={92} radius={7} fill="#E8B4B8" />
+      <Star x={96} y={86} numPoints={8} innerRadius={4} outerRadius={10} fill="#C9184A" />
+      <Star x={w - 96} y={86} numPoints={8} innerRadius={4} outerRadius={10} fill="#C9184A" />
+    </Group>
+  );
+}
+
+function BalloonColumn({ x = 860, y = 80, colors, count = 16, scale = 1.2, seed = 22 }) {
+  const rng = mulberry32(seed);
+  const palette = colors || ['#C9A227', '#163A6B', '#E8C872', '#0F2C54', '#D4AF37', '#1D4E89'];
+  const spots = Array.from({ length: count }, (_, i) => {
+    const col = i % 3;
+    const row = Math.floor(i / 3);
+    return {
+      x: x + col * 92 * scale + ((row % 2) * 22 - 8) * scale,
+      y: y + row * 98 * scale + (col - 1) * 12 * scale,
+      s: (0.82 + rng() * 0.5) * scale,
+      color: palette[i % palette.length],
+      string: i % 5 === 0,
+    };
+  });
+  return (
+    <Group>
+      {spots.map((b, i) => (
+        <BalloonShape key={i} x={b.x} y={b.y} color={b.color} scale={b.s} string={b.string} />
+      ))}
+    </Group>
+  );
+}
+
+function CandleStick({ x, y, color, letter, scale = 1 }) {
+  return (
+    <Group x={x} y={y}>
+      <Rect x={-3.5 * scale} y={0} width={7 * scale} height={38 * scale} fill={color} cornerRadius={2} />
+      <Ellipse x={0} y={-10 * scale} radiusX={5 * scale} radiusY={8 * scale} fill="#FFE08A" />
+      <Ellipse x={0} y={-16 * scale} radiusX={2.2 * scale} radiusY={4 * scale} fill="#FFF6D6" />
+      {letter ? (
+        <Text
+          text={letter}
+          x={-10 * scale}
+          y={8 * scale}
+          width={20 * scale}
+          align="center"
+          fontFamily="Montserrat"
+          fontStyle="800"
+          fontSize={11 * scale}
+          fill="#FFFFFF"
+        />
+      ) : null}
+    </Group>
+  );
+}
+
+function PartyCake({ x, y, scale = 1 }) {
+  const s = 110 * scale;
+  const letters = 'HAPPYBIRTHDAY'.split('');
+  const colors = ['#F4D35E', '#FF8FAB', '#7BDFF2', '#C77DFF', '#90E0EF', '#F4A261', '#80ED99', '#FF6B6B', '#48CAE4', '#FFD166', '#B8F2E6', '#F72585', '#4CC9F0'];
+  return (
+    <Group x={x} y={y}>
+      <Ellipse x={0} y={s * 0.92} radiusX={s * 1.15} radiusY={s * 0.18} fill="rgba(0,0,0,0.12)" />
+      <Rect x={-s} y={-s * 0.15} width={s * 2} height={s * 0.95} fill="#F7F4EE" cornerRadius={18} />
+      <Ellipse x={0} y={-s * 0.15} radiusX={s} radiusY={s * 0.22} fill="#FFFFFF" />
+      <Ellipse x={0} y={s * 0.8} radiusX={s} radiusY={s * 0.2} fill="#F0EBE3" />
+      {Array.from({ length: 42 }).map((_, i) => {
+        const t = i / 42;
+        return (
+          <Circle
+            key={i}
+            x={Math.cos(t * Math.PI * 2) * s * 0.82}
+            y={s * 0.28 + Math.sin(t * 18) * 10}
+            radius={5 * scale}
+            fill={['#FF8FAB', '#90E0EF', '#FEE440', '#C77DFF', '#80ED99', '#F4A261'][i % 6]}
+          />
+        );
+      })}
+      {letters.map((letter, i) => {
+        const t = (i / (letters.length - 1) - 0.5) * 1.15;
+        return (
+          <CandleStick
+            key={letter + i}
+            x={t * s * 1.55}
+            y={-s * 0.55 - Math.abs(t) * 18}
+            color={colors[i % colors.length]}
+            letter={letter}
+            scale={scale * 0.92}
+          />
+        );
+      })}
+    </Group>
+  );
+}
+
+function LayerCake({ x, y, scale = 1 }) {
+  const s = 70 * scale;
+  return (
+    <Group x={x} y={y}>
+      <Ellipse x={0} y={s * 1.7} radiusX={s * 1.6} radiusY={s * 0.18} fill="rgba(0,0,0,0.12)" />
+      <Rect x={-s * 1.35} y={s * 0.55} width={s * 2.7} height={s * 0.95} fill="#E8C9A0" cornerRadius={16} />
+      <Rect x={-s * 1.35} y={s * 0.42} width={s * 2.7} height={s * 0.28} fill="#6B3F2A" cornerRadius={10} />
+      <Rect x={-s} y={-s * 0.15} width={s * 2} height={s * 0.78} fill="#F3C98B" cornerRadius={14} />
+      <Rect x={-s} y={-s * 0.28} width={s * 2} height={s * 0.24} fill="#F4B4C8" cornerRadius={10} />
+      <Rect x={-s * 0.7} y={-s * 0.95} width={s * 1.4} height={s * 0.72} fill="#F7C1D0" cornerRadius={12} />
+      <Rect x={-s * 0.7} y={-s * 1.08} width={s * 1.4} height={s * 0.22} fill="#FFFFFF" cornerRadius={10} />
+      {[-0.35, -0.12, 0.12, 0.35].map((slot, i) => (
+        <Rect key={i} x={s * slot - 2} y={-s * 1.55} width={4} height={s * 0.42} fill="#FFF3C4" cornerRadius={1} />
+      ))}
+      {[-0.35, -0.12, 0.12, 0.35].map((slot, i) => (
+        <Ellipse key={`f${i}`} x={s * slot} y={-s * 1.62} radiusX={4} radiusY={6} fill="#FFD166" />
+      ))}
+      <Text
+        text="HAPPY BIRTHDAY"
+        x={-s * 0.85}
+        y={-s * 1.95}
+        width={s * 1.7}
+        align="center"
+        fontFamily="Montserrat"
+        fontStyle="800"
+        fontSize={11 * scale}
+        fill="#C9184A"
+      />
+    </Group>
+  );
+}
+
+function DripCake({ x, y, scale = 1 }) {
+  const s = 78 * scale;
+  return (
+    <Group x={x} y={y}>
+      <Rect x={-8 * scale} y={s * 1.15} width={16 * scale} height={s * 0.7} fill="#E8DCC8" />
+      <Ellipse x={0} y={s * 1.85} radiusX={s * 0.85} radiusY={s * 0.12} fill="#F3E6D8" />
+      <Ellipse x={0} y={s * 1.12} radiusX={s * 1.05} radiusY={s * 0.16} fill="#F7F1E8" />
+      <Rect x={-s} y={-s * 0.05} width={s * 2} height={s * 1.05} fill="#F8E6C8" cornerRadius={18} />
+      <Line
+        closed
+        points={[-s, -s * 0.02, -s * 0.7, s * 0.55, -s * 0.42, -s * 0.02, -s * 0.1, s * 0.7, s * 0.18, -s * 0.02, s * 0.48, s * 0.5, s * 0.72, -s * 0.02, s, s * 0.35, s, -s * 0.02]}
+        fill="#5C3317"
+      />
+      <Ellipse x={0} y={-s * 0.08} radiusX={s} radiusY={s * 0.22} fill="#F4E1B5" />
+      {[-0.55, -0.22, 0.12, 0.48].map((slot, i) => (
+        <Group key={i} x={s * slot} y={-s * 0.18}>
+          <Ellipse x={0} y={0} radiusX={10 * scale} radiusY={8 * scale} fill="#FFF6E8" />
+          <Circle x={0} y={-4 * scale} radius={4 * scale} fill="#FF8FAB" />
+        </Group>
+      ))}
+      {[-0.38, -0.12, 0.12, 0.38].map((slot, i) => (
+        <Rect key={`c${i}`} x={s * slot - 2} y={-s * 0.72} width={4} height={s * 0.48} fill="#F1E3C0" />
+      ))}
+      {[-0.38, -0.12, 0.12, 0.38].map((slot, i) => (
+        <Ellipse key={`fl${i}`} x={s * slot} y={-s * 0.8} radiusX={4} radiusY={6} fill="#FFD166" />
       ))}
     </Group>
   );

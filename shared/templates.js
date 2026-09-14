@@ -1,4 +1,4 @@
-/** 20 distinct birthday-card templates from the provided sample layouts. */
+/** 25 distinct birthday-card templates, including 5 full-size party scenes. */
 
 const P = { width: 1080, height: 1350 };
 
@@ -6,6 +6,7 @@ export const categories = [
   { id: 'balloon-frames', label: 'Balloon Frames', range: [1, 7] },
   { id: 'gold-luxury', label: 'Gold Luxury', range: [8, 14] },
   { id: 'soft-botanical', label: 'Soft Botanical', range: [15, 20] },
+  { id: 'party-scenes', label: 'Party Scenes', range: [21, 25] },
 ];
 
 const QUOTES = [
@@ -29,6 +30,11 @@ const QUOTES = [
   'May tenderness find you and stay.',
   'Plot twist: the best chapter starts today.',
   'Go be legendary — the calendar is ready.',
+  'A sweet note for a sweeter year ahead.',
+  'May gold days and bright nights treat you kindly.',
+  'Light the candles. Make the wish. The year is yours.',
+  'Cake, balloons, and a whole lot of you.',
+  'Another trip around the sun — save me a slice.',
 ];
 
 const WISHES = [
@@ -52,10 +58,22 @@ const WISHES = [
   'If happiness had a face, it would look a lot like yours today.',
   'Keep dreaming in color and believing in the magic you already are.',
   'Take up space. Take your time. Take the year. Go be iconic.',
+  'May this year arrive like a gift — wrapped in joy, tied with love.',
+  'Here is to laughter that lingers and wishes that come true.',
+  'Blow out the candles. Keep the spark. Happy Birthday.',
+  'May your days be layered with sweetness and surprise.',
+  'Celebrate loudly, love deeply, and enjoy every slice of the year.',
 ];
 
 function copy(id) {
   return { quote2: QUOTES[id - 1], wish: WISHES[id - 1] };
+}
+
+function categoryFor(id) {
+  if (id <= 7) return { category: 'balloon-frames', categoryLabel: 'Balloon Frames' };
+  if (id <= 14) return { category: 'gold-luxury', categoryLabel: 'Gold Luxury' };
+  if (id <= 20) return { category: 'soft-botanical', categoryLabel: 'Soft Botanical' };
+  return { category: 'party-scenes', categoryLabel: 'Party Scenes' };
 }
 
 function card(id, name, layout, fields) {
@@ -64,8 +82,7 @@ function card(id, name, layout, fields) {
   return {
     id,
     slug: name.toLowerCase().replace(/\s+/g, '-'),
-    category: id <= 7 ? 'balloon-frames' : id <= 14 ? 'gold-luxury' : 'soft-botanical',
-    categoryLabel: id <= 7 ? 'Balloon Frames' : id <= 14 ? 'Gold Luxury' : 'Soft Botanical',
+    ...categoryFor(id),
     name,
     canvas: P,
     layout,
@@ -408,6 +425,73 @@ export const templates = [
     nameStyle: N(540, 890, { fontSize: 88, fill: '#7A2E4A' }),
     quote2Style: Q(540, 990, { fontSize: 52, fill: '#7A2E4A', height: 160 }),
     wishStyle: W(540, 1150, { fontSize: 40, fill: '#8B3A56', height: 168 }),
+  }),
+
+  card(21, 'Envelope Gift Note', 'envelope-gift-note', {
+    background: { type: 'solid', colors: ['#F3E6D8'] },
+    decorations: [
+      { type: 'envelope-scene', canvas: P },
+      { type: 'gifts', foreground: true, items: [{ x: 900, y: 860, scale: 1.15, boxColor: '#2F9E44', ribbonColor: '#FFFFFF' }, { x: 820, y: 900, scale: 0.82, boxColor: '#E76F51', ribbonColor: '#F4D35E' }] },
+    ],
+    photo: { frame: 'rounded', fit: 'cover', x: 92, y: 200, w: 896, h: 700, radius: 8, borderWidth: 0, fill: '#F7F1EA' },
+    headline: H('Happy Birthday', 540, 48, { fontSize: 92, fill: '#7A2E4A', fontFamily: 'Great Vibes' }),
+    nameStyle: N(540, 920, { fontSize: 80, fill: '#5C3317' }),
+    quote2Style: Q(540, 1020, { fontSize: 48, fill: '#6B4A28', height: 140 }),
+    wishStyle: W(540, 1170, { fontSize: 38, fill: '#7A5C34', height: 150 }),
+  }),
+
+  card(22, 'Gold Navy Balloon Column', 'gold-navy-balloons', {
+    background: { type: 'linear', colors: ['#F3E6D0', '#E8D5B5'], angle: 180 },
+    decorations: [
+      { type: 'balloon-column', x: 850, y: 40, count: 16, scale: 1.18, seed: 22, colors: ['#C9A227', '#163A6B', '#E8C872', '#0F2C54', '#D4AF37', '#1D4E89'] },
+    ],
+    photo: { frame: 'rounded', fit: 'cover', x: 48, y: 200, w: 700, h: 660, radius: 28, borderWidth: 0, fill: '#EDE0C8' },
+    headline: H('Happy Birthday', 70, 42, { align: 'left', width: 720, fontSize: 80, fill: '#6B4226', fontFamily: 'Great Vibes' }),
+    nameStyle: N(70, 890, { align: 'left', width: 680, fontSize: 72, fill: '#6B4226' }),
+    quote2Style: Q(70, 990, { align: 'left', width: 680, fontSize: 42, fill: '#6B4226', height: 140 }),
+    wishStyle: W(70, 1160, { align: 'left', width: 680, fontSize: 34, fill: '#7A5C34', height: 160 }),
+  }),
+
+  card(23, 'Candle Cake Studio', 'candle-cake-studio', {
+    background: { type: 'linear', colors: ['#8EC8E3', '#B9DFF0'], angle: 180 },
+    decorations: [
+      { type: 'sprinkles', count: 28, seed: 23, colors: ['#FF8FAB', '#FEE440', '#90E0EF', '#C77DFF'], canvas: P },
+      { type: 'party-cake', x: 800, y: 1080, scale: 0.92, foreground: true },
+    ],
+    photo: { frame: 'rounded', fit: 'cover', x: 48, y: 188, w: 984, h: 700, radius: 28, borderWidth: 0, fill: '#D6EAF8' },
+    headline: H('Happy Birthday', 540, 42, { fontSize: 96, fill: '#1B4F72', fontFamily: 'Pacifico' }),
+    nameStyle: N(48, 910, { align: 'left', width: 620, fontSize: 76, fill: '#1B4F72' }),
+    quote2Style: Q(48, 1010, { align: 'left', width: 620, fontSize: 44, fill: '#245571', height: 130 }),
+    wishStyle: W(48, 1160, { align: 'left', width: 620, fontSize: 36, fill: '#2C5F78', height: 150 }),
+  }),
+
+  card(24, 'Mint Party Table', 'mint-party-table', {
+    background: { type: 'linear', colors: ['#BFE8E2', '#9FDDD4'], angle: 180 },
+    decorations: [
+      { type: 'table-band', y: 1120, color: '#F4A7C1' },
+      { type: 'balloon-bouquet', x: 170, y: 250, colors: ['#FF8FAB', '#F4D35E', '#FF9F1C', '#90E0EF', '#C77DFF'], scale: 1.05 },
+      { type: 'gifts', items: [{ x: 130, y: 1040, scale: 0.95, boxColor: '#F4A261', ribbonColor: '#FFFFFF' }, { x: 230, y: 1070, scale: 0.7, boxColor: '#3A86FF', ribbonColor: '#FEE440' }] },
+      { type: 'layer-cake', x: 300, y: 980, scale: 1.05 },
+    ],
+    photo: { frame: 'rounded', fit: 'cover', x: 500, y: 188, w: 540, h: 900, radius: 32, borderWidth: 0, fill: '#D8F3DC' },
+    headline: H('Happy Birthday', 540, 40, { fontSize: 84, fill: '#1B4332', fontFamily: 'Pacifico' }),
+    nameStyle: N(40, 820, { align: 'left', width: 430, fontSize: 64, fill: '#1B4332' }),
+    quote2Style: Q(40, 930, { align: 'left', width: 430, fontSize: 40, fill: '#1B4332', height: 150 }),
+    wishStyle: W(40, 1100, { align: 'left', width: 430, fontSize: 34, fill: '#245C46', height: 200 }),
+  }),
+
+  card(25, 'Cream Drip Celebration', 'cream-drip-celebration', {
+    background: { type: 'linear', colors: ['#F7EFE4', '#F3E6D4'], angle: 210 },
+    decorations: [
+      { type: 'balloon-bouquet', x: 170, y: 210, colors: ['#90E0EF', '#FF8FAB', '#80ED99', '#F4A261', '#C77DFF'], scale: 1.12 },
+      { type: 'hearts', count: 16, seed: 25, colors: ['#F4A261', '#FF8FAB', '#90E0EF'], canvas: P },
+      { type: 'drip-cake', x: 220, y: 980, scale: 1.2 },
+    ],
+    photo: { frame: 'rounded', fit: 'cover', x: 520, y: 210, w: 520, h: 880, radius: 28, borderWidth: 0, fill: '#F3E6D4' },
+    headline: H('Happy Birthday', 540, 40, { fontSize: 88, fill: '#6B4226', fontFamily: 'Great Vibes' }),
+    nameStyle: N(40, 820, { align: 'left', width: 450, fontSize: 64, fill: '#6B4226' }),
+    quote2Style: Q(40, 930, { align: 'left', width: 450, fontSize: 40, fill: '#6B4226', height: 150 }),
+    wishStyle: W(40, 1100, { align: 'left', width: 450, fontSize: 34, fill: '#7A5C34', height: 200 }),
   }),
 ];
 

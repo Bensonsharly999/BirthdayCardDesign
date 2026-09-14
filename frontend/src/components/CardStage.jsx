@@ -123,7 +123,8 @@ function PhotoImage({ image, fit, extra = {} }) {
 }
 
 function placePhoto(image, boxW, boxH, photo, cutout) {
-  return fitPhoto(image, boxW, boxH, cutout, photo?.pad ?? 0.04, photo?.frame);
+  const useCutout = Boolean(cutout) && photo?.fit !== 'cover';
+  return fitPhoto(image, boxW, boxH, useCutout, photo?.pad ?? 0.04, photo?.frame);
 }
 
 function PhotoLayer({ photo, image, cutout = false }) {
@@ -561,6 +562,9 @@ export const CardStage = forwardRef(function CardStage(
 
   if (!card) return null;
 
+  const behindDecor = (card.decorations || []).filter((item) => !item.foreground);
+  const frontDecor = (card.decorations || []).filter((item) => item.foreground);
+
   return (
     <div className={className}>
       <Stage
@@ -572,8 +576,9 @@ export const CardStage = forwardRef(function CardStage(
       >
         <Layer>
           <Background canvas={canvas} background={card.background} overlays={card.overlays} />
-          <Decorations items={card.decorations} canvas={canvas} />
+          <Decorations items={behindDecor} canvas={canvas} />
           <PhotoLayer photo={card.photo} image={image} cutout={cutout} />
+          <Decorations items={frontDecor} canvas={canvas} />
           {card.quotePanel && (
             <Rect
               x={card.quotePanel.x}
