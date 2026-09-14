@@ -1,0 +1,4483 @@
+[
+  {
+    "id": 1,
+    "slug": "sunset-confetti-burst",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Sunset Confetti Burst",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "center-circle-confetti",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#FF5F6D",
+        "#FFC371",
+        "#FF4E50"
+      ],
+      "angle": 155
+    },
+    "overlays": [
+      {
+        "type": "radial",
+        "colors": [
+          "rgba(255,255,255,0.28)",
+          "transparent"
+        ],
+        "x": 0.5,
+        "y": 0.18,
+        "radius": 0.55
+      }
+    ],
+    "decorations": [
+      {
+        "type": "confetti",
+        "count": 90,
+        "seed": 11,
+        "colors": [
+          "#fff",
+          "#FFE66D",
+          "#4ECDC4",
+          "#FF6B6B",
+          "#C44DFF"
+        ]
+      },
+      {
+        "type": "balloons",
+        "items": [
+          {
+            "x": 90,
+            "y": 180,
+            "color": "#FF4D6D",
+            "scale": 1
+          },
+          {
+            "x": 960,
+            "y": 220,
+            "color": "#FFE66D",
+            "scale": 0.85
+          },
+          {
+            "x": 70,
+            "y": 980,
+            "color": "#4ECDC4",
+            "scale": 0.9
+          },
+          {
+            "x": 980,
+            "y": 1040,
+            "color": "#C44DFF",
+            "scale": 1.05
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 430,
+      "w": 430,
+      "h": 430,
+      "borderWidth": 14,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 128,
+      "fontFamily": "Montserrat",
+      "fontSize": 44,
+      "fontStyle": "900",
+      "fill": "#FFFFFF",
+      "letterSpacing": 12,
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.25)",
+      "shadowBlur": 10
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 700,
+      "fontFamily": "Playfair Display",
+      "fontSize": 72,
+      "fontStyle": "italic 700",
+      "fill": "#FFFFFF",
+      "align": "center",
+      "letterSpacing": 1,
+      "shadowColor": "rgba(0,0,0,0.35)",
+      "shadowBlur": 16,
+      "glow": "#FFD93D"
+    },
+    "wish": "May every dream you hold close to your heart become a beautiful reality. Wishing you a year filled with success, happiness, unforgettable moments, and endless reasons to smile.",
+    "wishStyle": {
+      "x": 540,
+      "y": 980,
+      "width": 820,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 26,
+      "fontStyle": "italic",
+      "fill": "#FFF8F0",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 2,
+    "slug": "neon-split-fireworks",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Neon Split Fireworks",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "left-split-neon-fireworks",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#0F0C29",
+        "#302B63",
+        "#24243E"
+      ],
+      "angle": 180
+    },
+    "overlays": [
+      {
+        "type": "linear",
+        "colors": [
+          "#F72585",
+          "#7209B7",
+          "#3A0CA3"
+        ],
+        "angle": 90,
+        "x": 0.52,
+        "y": 0,
+        "w": 0.48,
+        "h": 1,
+        "opacity": 1
+      }
+    ],
+    "decorations": [
+      {
+        "type": "fireworks",
+        "items": [
+          {
+            "x": 820,
+            "y": 220,
+            "color": "#F72585"
+          },
+          {
+            "x": 940,
+            "y": 480,
+            "color": "#4CC9F0"
+          },
+          {
+            "x": 760,
+            "y": 720,
+            "color": "#B5179E"
+          },
+          {
+            "x": 900,
+            "y": 1080,
+            "color": "#F9C74F"
+          }
+        ]
+      },
+      {
+        "type": "sparkles",
+        "count": 40,
+        "seed": 22,
+        "color": "#FFFFFF"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 36,
+      "x": 40,
+      "y": 180,
+      "w": 500,
+      "h": 980,
+      "borderWidth": 8,
+      "borderColor": "#F72585",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "MAKE A WISH",
+      "x": 800,
+      "y": 160,
+      "fontFamily": "Oswald",
+      "fontSize": 48,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 800,
+      "y": 860,
+      "width": 460,
+      "fontFamily": "Abril Fatface",
+      "fontSize": 58,
+      "fill": "#FFD60A",
+      "align": "center",
+      "shadowColor": "rgba(247,37,133,0.6)",
+      "shadowBlur": 18
+    },
+    "wish": "Today is a celebration of the amazing person you are and the wonderful journey ahead. May your days be bright, your achievements endless, and your happiness limitless.",
+    "wishStyle": {
+      "x": 800,
+      "y": 1040,
+      "width": 430,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#F8F7FF",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 3,
+    "slug": "electric-purple-balloons",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Electric Purple Balloons",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "right-split-electric",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#7F00FF",
+        "#E100FF",
+        "#FF6EC7"
+      ],
+      "angle": 125
+    },
+    "decorations": [
+      {
+        "type": "balloons",
+        "items": [
+          {
+            "x": 80,
+            "y": 160,
+            "color": "#FFD166",
+            "scale": 1.1
+          },
+          {
+            "x": 200,
+            "y": 320,
+            "color": "#06D6A0",
+            "scale": 0.8
+          },
+          {
+            "x": 60,
+            "y": 700,
+            "color": "#118AB2",
+            "scale": 1
+          },
+          {
+            "x": 220,
+            "y": 980,
+            "color": "#FF6B6B",
+            "scale": 0.95
+          }
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 50,
+        "seed": 33,
+        "colors": [
+          "#FFD166",
+          "#FFFFFF",
+          "#06D6A0"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 48,
+      "x": 500,
+      "y": 160,
+      "w": 540,
+      "h": 720,
+      "borderWidth": 10,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "CELEBRATE",
+      "x": 270,
+      "y": 200,
+      "fontFamily": "Bebas Neue",
+      "fontSize": 72,
+      "fill": "#FFFFFF",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 270,
+      "y": 430,
+      "width": 440,
+      "fontFamily": "Pacifico",
+      "fontSize": 52,
+      "fill": "#FFF7AE",
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.3)",
+      "shadowBlur": 12
+    },
+    "wish": "On this special day, may the universe conspire to bring you everything your soul has been quietly hoping for. Happy Birthday to someone truly extraordinary.",
+    "wishStyle": {
+      "x": 270,
+      "y": 980,
+      "width": 440,
+      "fontFamily": "Nunito",
+      "fontSize": 20,
+      "fill": "#FFFFFF",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 4,
+    "slug": "fullscreen-confetti-overlay",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Full-Screen Confetti Glow",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "fullscreen-confetti-overlay",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#111111"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "confetti",
+        "count": 120,
+        "seed": 44,
+        "colors": [
+          "#FF006E",
+          "#FB5607",
+          "#FFBE0B",
+          "#8338EC",
+          "#3A86FF",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "type": "rays",
+        "x": 540,
+        "y": 200,
+        "color": "rgba(255,190,11,0.18)",
+        "rays": 18
+      }
+    ],
+    "photo": {
+      "frame": "full",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1350,
+      "overlay": "linear",
+      "overlayColors": [
+        "rgba(8,0,20,0.15)",
+        "rgba(8,0,20,0.78)"
+      ],
+      "overlayAngle": 180
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 820,
+      "fontFamily": "Oswald",
+      "fontSize": 56,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 10,
+      "align": "center",
+      "shadowColor": "#FF006E",
+      "shadowBlur": 20
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 910,
+      "fontFamily": "Playfair Display",
+      "fontSize": 68,
+      "fontStyle": "italic 700",
+      "fill": "#FFBE0B",
+      "align": "center",
+      "glow": "#FFBE0B"
+    },
+    "wish": "Another year of becoming even more remarkable. May this birthday mark the beginning of your most radiant, fearless, and fulfilling chapter yet.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1120,
+      "width": 860,
+      "fontFamily": "Poppins",
+      "fontSize": 22,
+      "fill": "#F5F5F5",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 5,
+    "slug": "heart-hot-pink-explosion",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Heart Hot Pink Explosion",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "heart-center-explosion",
+    "background": {
+      "type": "radial",
+      "colors": [
+        "#FF4D8D",
+        "#C9184A",
+        "#590D22"
+      ],
+      "x": 0.5,
+      "y": 0.42,
+      "radius": 0.85
+    },
+    "decorations": [
+      {
+        "type": "hearts",
+        "count": 28,
+        "seed": 55,
+        "colors": [
+          "#FFB3C1",
+          "#FFFFFF",
+          "#FF4D6D"
+        ]
+      },
+      {
+        "type": "sparkles",
+        "count": 36,
+        "seed": 56,
+        "color": "#FFE5EC"
+      }
+    ],
+    "photo": {
+      "frame": "heart",
+      "x": 540,
+      "y": 430,
+      "w": 470,
+      "h": 450,
+      "borderWidth": 12,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "WITH ALL MY HEART",
+      "x": 540,
+      "y": 110,
+      "fontFamily": "Montserrat",
+      "fontSize": 28,
+      "fontStyle": "800",
+      "fill": "#FFE5EC",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 760,
+      "fontFamily": "Great Vibes",
+      "fontSize": 86,
+      "fill": "#FFFFFF",
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.35)",
+      "shadowBlur": 14
+    },
+    "wish": "May your birthday be the first page of a year written in laughter, painted with adventure, and sealed with the kind of joy that lingers long after the candles fade.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1040,
+      "width": 840,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 26,
+      "fontStyle": "italic",
+      "fill": "#FFE5EC",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 6,
+    "slug": "polaroid-confetti-field",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Polaroid Confetti Field",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "tilted-polaroid-confetti",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#00F5D4",
+        "#00BBF9",
+        "#9B5DE5"
+      ],
+      "angle": 135
+    },
+    "decorations": [
+      {
+        "type": "confetti",
+        "count": 100,
+        "seed": 66,
+        "colors": [
+          "#FEE440",
+          "#F15BB5",
+          "#FFFFFF",
+          "#00F5D4"
+        ]
+      },
+      {
+        "type": "dots",
+        "count": 24,
+        "seed": 67,
+        "colors": [
+          "rgba(255,255,255,0.25)"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "polaroid",
+      "x": 540,
+      "y": 520,
+      "w": 560,
+      "h": 620,
+      "rotation": -6,
+      "caption": "THIS LEGEND",
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 40,
+        "color": "rgba(0,0,0,0.28)",
+        "offsetY": 22
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 120,
+      "fontFamily": "Righteous",
+      "fontSize": 52,
+      "fill": "#FFFFFF",
+      "letterSpacing": 4,
+      "align": "center",
+      "shadowColor": "rgba(155,93,229,0.5)",
+      "shadowBlur": 12
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Pacifico",
+      "fontSize": 56,
+      "fill": "#FEE440",
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.3)",
+      "shadowBlur": 10
+    },
+    "wish": "You deserve a year as vibrant as your spirit. May every sunrise bring new opportunities, every sunset bring peace, and every moment remind you how deeply you are loved.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1160,
+      "width": 860,
+      "fontFamily": "Nunito",
+      "fontSize": 20,
+      "fill": "#FFFFFF",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 7,
+    "slug": "magazine-color-blocks",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Magazine Color Blocks",
+    "canvas": {
+      "width": 1080,
+      "height": 1440
+    },
+    "layout": "magazine-color-blocks",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FF006E"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "block",
+        "x": 0,
+        "y": 0,
+        "w": 1080,
+        "h": 160,
+        "color": "#3A86FF"
+      },
+      {
+        "type": "block",
+        "x": 0,
+        "y": 1280,
+        "w": 1080,
+        "h": 160,
+        "color": "#FFBE0B"
+      },
+      {
+        "type": "diagonal-stripe",
+        "color": "#FB5607",
+        "thickness": 28
+      }
+    ],
+    "photo": {
+      "frame": "square",
+      "x": 90,
+      "y": 240,
+      "w": 900,
+      "h": 720,
+      "borderWidth": 0,
+      "borderColor": "#000",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "THE BIRTHDAY ISSUE",
+      "x": 540,
+      "y": 70,
+      "fontFamily": "Oswald",
+      "fontSize": 42,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1040,
+      "fontFamily": "Abril Fatface",
+      "fontSize": 64,
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "Here's to the gift of another year — not just of time, but of possibility. May you chase what sets your soul on fire and find beauty in every ordinary day.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1300,
+      "width": 900,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 20,
+      "fontStyle": "italic",
+      "fill": "#1A1A1A",
+      "align": "center",
+      "lineHeight": 1.4
+    }
+  },
+  {
+    "id": 8,
+    "slug": "story-party-sky",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Story Party Sky",
+    "canvas": {
+      "width": 1080,
+      "height": 1920
+    },
+    "layout": "story-party-circle",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#4CC9F0",
+        "#4361EE",
+        "#F72585"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "balloons",
+        "items": [
+          {
+            "x": 80,
+            "y": 80,
+            "color": "#F9C74F",
+            "scale": 0.9
+          },
+          {
+            "x": 960,
+            "y": 120,
+            "color": "#F72585",
+            "scale": 1
+          },
+          {
+            "x": 100,
+            "y": 1680,
+            "color": "#90E0EF",
+            "scale": 0.8
+          },
+          {
+            "x": 940,
+            "y": 1720,
+            "color": "#B5179E",
+            "scale": 0.85
+          }
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 70,
+        "seed": 88
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 620,
+      "w": 520,
+      "h": 520,
+      "borderWidth": 16,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "TODAY IS THE DAY",
+      "x": 540,
+      "y": 220,
+      "fontFamily": "Montserrat",
+      "fontSize": 28,
+      "fontStyle": "800",
+      "fill": "#FFFFFF",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Fredoka",
+      "fontSize": 70,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.25)",
+      "shadowBlur": 12
+    },
+    "wish": "May this birthday wrap you in warmth, lift you with hope, and fill your path with people who see the light you so generously share with the world.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1480,
+      "width": 840,
+      "fontFamily": "Poppins",
+      "fontSize": 24,
+      "fill": "#F8F7FF",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 9,
+    "slug": "floating-fireworks-glass",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Floating Fireworks Glass",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floating-glass-fireworks",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#0B132B",
+        "#1C2541",
+        "#3A0CA3"
+      ],
+      "angle": 200
+    },
+    "decorations": [
+      {
+        "type": "fireworks",
+        "items": [
+          {
+            "x": 160,
+            "y": 160,
+            "color": "#F72585"
+          },
+          {
+            "x": 920,
+            "y": 200,
+            "color": "#4CC9F0"
+          },
+          {
+            "x": 200,
+            "y": 1180,
+            "color": "#FFD60A"
+          },
+          {
+            "x": 880,
+            "y": 1120,
+            "color": "#9B5DE5"
+          }
+        ]
+      },
+      {
+        "type": "sparkles",
+        "count": 50,
+        "seed": 99,
+        "color": "#FFFFFF"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 28,
+      "x": 160,
+      "y": 220,
+      "w": 760,
+      "h": 520,
+      "borderWidth": 2,
+      "borderColor": "rgba(255,255,255,0.4)",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      },
+      "card": {
+        "x": 110,
+        "y": 170,
+        "w": 860,
+        "h": 1010,
+        "fill": "rgba(255,255,255,0.08)",
+        "radius": 40,
+        "stroke": "rgba(255,255,255,0.22)"
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 790,
+      "fontFamily": "Outfit",
+      "fontSize": 22,
+      "fontStyle": "800",
+      "fill": "#4CC9F0",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 840,
+      "fontFamily": "Playfair Display",
+      "fontSize": 60,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "Today we celebrate not just the day you were born, but every kind word, every brave choice, and every beautiful thing you have become. Happy Birthday.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1040,
+      "width": 740,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 24,
+      "fontStyle": "italic",
+      "fill": "#E0E7FF",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 10,
+    "slug": "balloon-portrait-sky",
+    "category": "color-explosion",
+    "categoryLabel": "Color Explosion",
+    "name": "Balloon Portrait Sky",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "balloon-frame",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#89C2D9",
+        "#56CFE1",
+        "#FFCAD4"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "clouds",
+        "seed": 101
+      },
+      {
+        "type": "balloons",
+        "items": [
+          {
+            "x": 80,
+            "y": 240,
+            "color": "#EF476F",
+            "scale": 0.7
+          },
+          {
+            "x": 980,
+            "y": 300,
+            "color": "#FFD166",
+            "scale": 0.65
+          },
+          {
+            "x": 120,
+            "y": 1100,
+            "color": "#06D6A0",
+            "scale": 0.6
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "balloon",
+      "x": 540,
+      "y": 480,
+      "w": 420,
+      "h": 420,
+      "borderWidth": 10,
+      "borderColor": "#EF476F",
+      "balloonColor": "#EF476F",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "UP, UP & AWAY",
+      "x": 540,
+      "y": 110,
+      "fontFamily": "Fredoka",
+      "fontSize": 40,
+      "fontStyle": "700",
+      "fill": "#073B4C",
+      "letterSpacing": 4,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 860,
+      "fontFamily": "Pacifico",
+      "fontSize": 58,
+      "fill": "#073B4C",
+      "align": "center"
+    },
+    "wish": "Let this year be unapologetically yours. May you rise, shine, wander, and wonder — and may happiness find you in the most unexpected places.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1080,
+      "width": 820,
+      "fontFamily": "Nunito",
+      "fontSize": 22,
+      "fill": "#26547C",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 11,
+    "slug": "obsidian-gold-ring",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Obsidian Gold Ring",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "center-gold-ring",
+    "background": {
+      "type": "radial",
+      "colors": [
+        "#1C1C1C",
+        "#0A0A0A"
+      ],
+      "x": 0.5,
+      "y": 0.4,
+      "radius": 0.9
+    },
+    "decorations": [
+      {
+        "type": "rings",
+        "x": 540,
+        "y": 430,
+        "radii": [
+          250,
+          270,
+          300
+        ],
+        "colors": [
+          "#D4AF37",
+          "#F5E6C8",
+          "#C9A227"
+        ]
+      },
+      {
+        "type": "sparkles",
+        "count": 28,
+        "seed": 111,
+        "color": "#D4AF37"
+      },
+      {
+        "type": "corner-ornament",
+        "color": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 430,
+      "w": 420,
+      "h": 420,
+      "borderWidth": 8,
+      "borderColor": "#D4AF37",
+      "shadow": {
+        "blur": 28,
+        "color": "rgba(212,175,55,0.45)",
+        "offsetY": 10,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "A GOLDEN YEAR",
+      "x": 540,
+      "y": 100,
+      "fontFamily": "Cinzel",
+      "fontSize": 28,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 12,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 740,
+      "fontFamily": "Cinzel",
+      "fontSize": 56,
+      "fontStyle": "700",
+      "fill": "#F5E6C8",
+      "align": "center",
+      "letterSpacing": 4,
+      "glow": "#D4AF37"
+    },
+    "wish": "Gold is the color of this moment because you are rare, luminous, and endlessly valuable. May this year polish every dream into something magnificent.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1020,
+      "width": 840,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 26,
+      "fontStyle": "italic",
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 12,
+    "slug": "gold-panel-left",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Gold Panel Portrait",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "left-full-gold-panel",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#0B0B0B"
+      ]
+    },
+    "overlays": [
+      {
+        "type": "linear",
+        "colors": [
+          "#1A1408",
+          "#0B0B0B"
+        ],
+        "angle": 90,
+        "x": 0.5,
+        "y": 0,
+        "w": 0.5,
+        "h": 1
+      }
+    ],
+    "decorations": [
+      {
+        "type": "vertical-rule",
+        "x": 540,
+        "color": "#D4AF37"
+      },
+      {
+        "type": "sparkles",
+        "count": 18,
+        "seed": 121,
+        "color": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "square",
+      "x": 0,
+      "y": 0,
+      "w": 540,
+      "h": 1350,
+      "borderWidth": 0,
+      "borderColor": "#D4AF37"
+    },
+    "headline": {
+      "text": "EST. THIS DAY",
+      "x": 810,
+      "y": 220,
+      "fontFamily": "Cinzel",
+      "fontSize": 18,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 810,
+      "y": 420,
+      "width": 480,
+      "fontFamily": "Playfair Display",
+      "fontSize": 58,
+      "fontStyle": "italic 700",
+      "fill": "#F5E6C8",
+      "align": "center"
+    },
+    "wish": "In a world of ordinary days, you are a celebration. May this birthday usher in elegance, abundance, and the quiet confidence of someone destined for greatness.",
+    "wishStyle": {
+      "x": 810,
+      "y": 900,
+      "width": 430,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 18,
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.55
+    }
+  },
+  {
+    "id": 13,
+    "slug": "right-gold-typography",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Right Gold Typography",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "right-gold-type-column",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#121212",
+        "#1F1A10"
+      ],
+      "angle": 90
+    },
+    "decorations": [
+      {
+        "type": "script-flourish",
+        "x": 270,
+        "y": 180,
+        "color": "#D4AF37"
+      },
+      {
+        "type": "dots",
+        "count": 12,
+        "seed": 131,
+        "colors": [
+          "#D4AF37"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 0,
+      "x": 540,
+      "y": 80,
+      "w": 500,
+      "h": 1190,
+      "borderWidth": 1,
+      "borderColor": "#D4AF37"
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 270,
+      "y": 280,
+      "fontFamily": "Cinzel",
+      "fontSize": 22,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 270,
+      "y": 480,
+      "width": 460,
+      "fontFamily": "Great Vibes",
+      "fontSize": 72,
+      "fill": "#F5E6C8",
+      "align": "center"
+    },
+    "wish": "May fortune favor the bold, and may you be bolder than ever. Wishing you a year of golden opportunities, midnight toasts, and victories worth remembering.",
+    "wishStyle": {
+      "x": 270,
+      "y": 900,
+      "width": 430,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 14,
+    "slug": "foil-fullscreen",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Gold Foil Fullscreen",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "fullscreen-gold-foil-frame",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#000"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "frame-double",
+        "inset": 36,
+        "color": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "full",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1350,
+      "overlay": "linear",
+      "overlayColors": [
+        "rgba(0,0,0,0.1)",
+        "rgba(0,0,0,0.72)"
+      ],
+      "overlayAngle": 180
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 860,
+      "fontFamily": "Cinzel",
+      "fontSize": 26,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 14,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 940,
+      "fontFamily": "Playfair Display",
+      "fontSize": 70,
+      "fontStyle": "italic 700",
+      "fill": "#F5E6C8",
+      "align": "center",
+      "glow": "#D4AF37"
+    },
+    "wish": "You were born to stand out, not to blend in. May this year drape you in success, surround you with loyalty, and reward every ounce of your ambition.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1140,
+      "width": 860,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 20,
+      "fill": "#E8D5A3",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 15,
+    "slug": "diamond-gold-frame",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Diamond Gold Frame",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "diamond-frame",
+    "background": {
+      "type": "radial",
+      "colors": [
+        "#161616",
+        "#050505"
+      ],
+      "x": 0.5,
+      "y": 0.45,
+      "radius": 0.8
+    },
+    "decorations": [
+      {
+        "type": "rays",
+        "x": 540,
+        "y": 480,
+        "color": "rgba(212,175,55,0.12)",
+        "rays": 16
+      },
+      {
+        "type": "sparkles",
+        "count": 24,
+        "seed": 151,
+        "color": "#F5E6C8"
+      }
+    ],
+    "photo": {
+      "frame": "diamond",
+      "x": 540,
+      "y": 480,
+      "w": 420,
+      "h": 420,
+      "borderWidth": 6,
+      "borderColor": "#D4AF37",
+      "shadow": {
+        "blur": 28,
+        "color": "rgba(212,175,55,0.45)",
+        "offsetY": 10,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "RARE & RADIANT",
+      "x": 540,
+      "y": 120,
+      "fontFamily": "Cinzel",
+      "fontSize": 24,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 820,
+      "fontFamily": "Cinzel",
+      "fontSize": 52,
+      "fontStyle": "700",
+      "fill": "#F5E6C8",
+      "align": "center",
+      "letterSpacing": 3
+    },
+    "wish": "A toast to your brilliance. May the year ahead be tailored in luxury, stitched with purpose, and worn with the pride of someone who knows their worth.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1060,
+      "width": 820,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 24,
+      "fontStyle": "italic",
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 16,
+    "slug": "polaroid-marble-gold",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Polaroid Marble Gold",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "polaroid-marble-luxury",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#1A1A1A",
+        "#2A2418",
+        "#111"
+      ],
+      "angle": 160
+    },
+    "decorations": [
+      {
+        "type": "marble-veins",
+        "color": "rgba(212,175,55,0.18)",
+        "seed": 161
+      },
+      {
+        "type": "corner-ornament",
+        "color": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "polaroid",
+      "x": 540,
+      "y": 500,
+      "w": 540,
+      "h": 600,
+      "rotation": 3,
+      "caption": "TIMELESS",
+      "borderColor": "#F5E6C8",
+      "shadow": {
+        "blur": 28,
+        "color": "rgba(212,175,55,0.45)",
+        "offsetY": 10,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 120,
+      "fontFamily": "Cinzel",
+      "fontSize": 28,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Great Vibes",
+      "fontSize": 68,
+      "fill": "#F5E6C8",
+      "align": "center"
+    },
+    "wish": "May every locked door open, every silent prayer be answered, and every late-night hope find its way into daylight. You deserve nothing less than extraordinary.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1160,
+      "width": 840,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 18,
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 17,
+    "slug": "luxury-magazine",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Luxury Magazine Cover",
+    "canvas": {
+      "width": 1080,
+      "height": 1440
+    },
+    "layout": "magazine-luxe-cover",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#0A0A0A"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "block",
+        "x": 0,
+        "y": 0,
+        "w": 1080,
+        "h": 8,
+        "color": "#D4AF37"
+      },
+      {
+        "type": "block",
+        "x": 0,
+        "y": 1432,
+        "w": 1080,
+        "h": 8,
+        "color": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "square",
+      "x": 80,
+      "y": 220,
+      "w": 920,
+      "h": 780,
+      "borderWidth": 1,
+      "borderColor": "#D4AF37"
+    },
+    "headline": {
+      "text": "LUXE",
+      "x": 540,
+      "y": 70,
+      "fontFamily": "Cinzel",
+      "fontSize": 64,
+      "fontStyle": "900",
+      "fill": "#D4AF37",
+      "letterSpacing": 18,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1080,
+      "fontFamily": "Playfair Display",
+      "fontSize": 56,
+      "fontStyle": "italic 700",
+      "fill": "#F5E6C8",
+      "align": "center"
+    },
+    "wish": "This is your era of elevation. May you collect milestones like treasures, and may the world finally catch up to the vision you have always carried.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1280,
+      "width": 880,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 18,
+    "slug": "story-black-tie",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Black Tie Story",
+    "canvas": {
+      "width": 1080,
+      "height": 1920
+    },
+    "layout": "story-black-tie-circle",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#000000",
+        "#1A1408",
+        "#000000"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "frame-double",
+        "inset": 40,
+        "color": "#D4AF37"
+      },
+      {
+        "type": "sparkles",
+        "count": 20,
+        "seed": 181,
+        "color": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 640,
+      "w": 480,
+      "h": 480,
+      "borderWidth": 6,
+      "borderColor": "#D4AF37",
+      "shadow": {
+        "blur": 28,
+        "color": "rgba(212,175,55,0.45)",
+        "offsetY": 10,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "AN EVENING IN YOUR HONOR",
+      "x": 540,
+      "y": 220,
+      "fontFamily": "Cinzel",
+      "fontSize": 20,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1020,
+      "fontFamily": "Cinzel",
+      "fontSize": 56,
+      "fontStyle": "700",
+      "fill": "#F5E6C8",
+      "align": "center",
+      "letterSpacing": 4
+    },
+    "wish": "Born to shine, destined to soar. May this birthday be the spark that ignites your most powerful, prosperous, and poetic year yet.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1500,
+      "width": 820,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 19,
+    "slug": "floating-gold-invite",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Floating Gold Invite",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floating-gold-invite",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#0C0C0C"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "dots",
+        "count": 40,
+        "seed": 191,
+        "colors": [
+          "rgba(212,175,55,0.25)"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 420,
+      "w": 340,
+      "h": 340,
+      "borderWidth": 5,
+      "borderColor": "#D4AF37",
+      "shadow": {
+        "blur": 28,
+        "color": "rgba(212,175,55,0.45)",
+        "offsetY": 10,
+        "offsetX": 0
+      },
+      "card": {
+        "x": 120,
+        "y": 140,
+        "w": 840,
+        "h": 1070,
+        "fill": "#141414",
+        "radius": 8,
+        "stroke": "#D4AF37"
+      }
+    },
+    "headline": {
+      "text": "YOU ARE INVITED TO SHINE",
+      "x": 540,
+      "y": 200,
+      "fontFamily": "Cinzel",
+      "fontSize": 16,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 700,
+      "fontFamily": "Great Vibes",
+      "fontSize": 72,
+      "fill": "#F5E6C8",
+      "align": "center"
+    },
+    "wish": "May your name be spoken with admiration, your work met with reward, and your heart kept full. Happy Birthday to a soul of gold.",
+    "wishStyle": {
+      "x": 540,
+      "y": 960,
+      "width": 720,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 24,
+      "fontStyle": "italic",
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 20,
+    "slug": "diagonal-gold-split",
+    "category": "gold-black",
+    "categoryLabel": "Premium Gold & Black",
+    "name": "Diagonal Gold Split",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "split-diagonal",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#0A0A0A"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "diagonal-split",
+        "color": "#1A1408",
+        "gold": "#D4AF37"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 20,
+      "x": 70,
+      "y": 380,
+      "w": 460,
+      "h": 580,
+      "borderWidth": 3,
+      "borderColor": "#D4AF37",
+      "shadow": {
+        "blur": 28,
+        "color": "rgba(212,175,55,0.45)",
+        "offsetY": 10,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 760,
+      "y": 280,
+      "fontFamily": "Cinzel",
+      "fontSize": 20,
+      "fontStyle": "700",
+      "fill": "#D4AF37",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 760,
+      "y": 480,
+      "width": 500,
+      "fontFamily": "Playfair Display",
+      "fontSize": 52,
+      "fontStyle": "italic 700",
+      "fill": "#F5E6C8",
+      "align": "center"
+    },
+    "wish": "Luxury is not what you own — it is how you live. May this year be rich in meaning, lavish in love, and abundant in everything that makes you feel alive.",
+    "wishStyle": {
+      "x": 760,
+      "y": 900,
+      "width": 460,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 18,
+      "fill": "#C9B896",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 21,
+    "slug": "peony-wreath-circle",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Peony Wreath Circle",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floral-wreath",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#FFF5F5",
+        "#FDE2E4",
+        "#FAD2E1"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "wreath",
+        "x": 540,
+        "y": 430,
+        "radius": 250,
+        "colors": [
+          "#E8B4B8",
+          "#B5838D",
+          "#6B8F71",
+          "#F4ACB7"
+        ]
+      },
+      {
+        "type": "petals",
+        "count": 18,
+        "seed": 211,
+        "colors": [
+          "#E8B4B8",
+          "#F4ACB7"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 430,
+      "w": 400,
+      "h": 400,
+      "borderWidth": 8,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 90,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 28,
+      "fontStyle": "700",
+      "fill": "#6D597A",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 740,
+      "fontFamily": "Great Vibes",
+      "fontSize": 78,
+      "fill": "#9B2335",
+      "align": "center"
+    },
+    "wish": "Like a garden in full bloom, may your life open petal by petal into something breathtaking. Wishing you a birthday as graceful and radiant as you are.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1020,
+      "width": 840,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 22,
+    "slug": "botanical-left",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Botanical Left Portrait",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "left-botanical-portrait",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#F7F3EE"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "flowers",
+        "items": [
+          {
+            "x": 820,
+            "y": 180,
+            "color": "#C9A9A6",
+            "scale": 1.2
+          },
+          {
+            "x": 940,
+            "y": 420,
+            "color": "#6B8F71",
+            "scale": 1
+          },
+          {
+            "x": 780,
+            "y": 700,
+            "color": "#E8B4B8",
+            "scale": 0.9
+          },
+          {
+            "x": 900,
+            "y": 1080,
+            "color": "#A3B18A",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "type": "leaves",
+        "seed": 221,
+        "color": "#6B8F71"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 24,
+      "x": 50,
+      "y": 80,
+      "w": 520,
+      "h": 1190,
+      "borderWidth": 0,
+      "borderColor": "#fff"
+    },
+    "headline": {
+      "text": "IN FULL BLOOM",
+      "x": 800,
+      "y": 240,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 22,
+      "fill": "#6B8F71",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 800,
+      "y": 400,
+      "width": 460,
+      "fontFamily": "Playfair Display",
+      "fontSize": 52,
+      "fontStyle": "italic 700",
+      "fill": "#3D405B",
+      "align": "center"
+    },
+    "wish": "May the year ahead be a quiet meadow of peace and a wild field of possibility. Grow gently, love deeply, and bloom without apology.",
+    "wishStyle": {
+      "x": 800,
+      "y": 860,
+      "width": 430,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 23,
+    "slug": "blush-right-garden",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Blush Right Garden",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "right-blush-arch",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#FAE0E4",
+        "#F8EDEB",
+        "#F9DCC4"
+      ],
+      "angle": 120
+    },
+    "decorations": [
+      {
+        "type": "flowers",
+        "items": [
+          {
+            "x": 120,
+            "y": 160,
+            "color": "#F4ACB7",
+            "scale": 1.1
+          },
+          {
+            "x": 240,
+            "y": 500,
+            "color": "#D8A48F",
+            "scale": 0.85
+          },
+          {
+            "x": 90,
+            "y": 980,
+            "color": "#A3B18A",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 200,
+      "x": 500,
+      "y": 140,
+      "w": 530,
+      "h": 700,
+      "borderWidth": 10,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "DEAREST",
+      "x": 270,
+      "y": 240,
+      "fontFamily": "Cinzel",
+      "fontSize": 18,
+      "fill": "#9B2335",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 270,
+      "y": 400,
+      "width": 440,
+      "fontFamily": "Allura",
+      "fontSize": 68,
+      "fill": "#6D2E46",
+      "align": "center"
+    },
+    "wish": "Soft light, kind hearts, and the scent of new beginnings. May this birthday plant seeds of joy that flower in every season of your life.",
+    "wishStyle": {
+      "x": 270,
+      "y": 980,
+      "width": 440,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 18,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 24,
+    "slug": "fullscreen-floral-corners",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Fullscreen Floral Corners",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "fullscreen-floral-corners",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#F8EDEB"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "corner-flowers",
+        "colors": [
+          "#E8B4B8",
+          "#6B8F71",
+          "#D8A48F"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "full",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1350,
+      "overlay": "linear",
+      "overlayColors": [
+        "rgba(253,226,228,0.05)",
+        "rgba(61,64,91,0.55)"
+      ],
+      "overlayAngle": 180
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 860,
+      "fontFamily": "Cinzel",
+      "fontSize": 22,
+      "fill": "#F8EDEB",
+      "letterSpacing": 12,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 930,
+      "fontFamily": "Great Vibes",
+      "fontSize": 80,
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "You are the kind of person the world is better for knowing. May your days unfold like roses — slowly, beautifully, and with a fragrance that lingers.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1140,
+      "width": 840,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 24,
+      "fontStyle": "italic",
+      "fill": "#FDE2E4",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 25,
+    "slug": "heart-rose-garden",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Heart Rose Garden",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "heart-rose-garden",
+    "background": {
+      "type": "radial",
+      "colors": [
+        "#FFF0F3",
+        "#FFCCD5",
+        "#F8BBD0"
+      ],
+      "x": 0.5,
+      "y": 0.4,
+      "radius": 0.85
+    },
+    "decorations": [
+      {
+        "type": "flowers",
+        "items": [
+          {
+            "x": 90,
+            "y": 140,
+            "color": "#C9184A",
+            "scale": 0.9
+          },
+          {
+            "x": 980,
+            "y": 180,
+            "color": "#E8B4B8",
+            "scale": 1
+          },
+          {
+            "x": 80,
+            "y": 1100,
+            "color": "#6B8F71",
+            "scale": 0.85
+          },
+          {
+            "x": 970,
+            "y": 1060,
+            "color": "#C9184A",
+            "scale": 0.8
+          }
+        ]
+      },
+      {
+        "type": "petals",
+        "count": 22,
+        "seed": 251,
+        "colors": [
+          "#FF758F",
+          "#FFCCD5"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "heart",
+      "x": 540,
+      "y": 430,
+      "w": 460,
+      "h": 440,
+      "borderWidth": 10,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "GROWN WITH LOVE",
+      "x": 540,
+      "y": 100,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 24,
+      "fontStyle": "700",
+      "fill": "#9B2335",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 760,
+      "fontFamily": "Allura",
+      "fontSize": 78,
+      "fill": "#6D2E46",
+      "align": "center"
+    },
+    "wish": "May tenderness find you, courage keep you, and beauty surprise you at every turn. Happy Birthday, and may your spirit stay in everlasting bloom.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1040,
+      "width": 840,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 20,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 26,
+    "slug": "polaroid-watercolor-garden",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Polaroid Watercolor Garden",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "polaroid-watercolor",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#E9EDC9",
+        "#FEFAE0",
+        "#D4A373"
+      ],
+      "angle": 150
+    },
+    "decorations": [
+      {
+        "type": "watercolor-blobs",
+        "seed": 261,
+        "colors": [
+          "rgba(188,108,37,0.2)",
+          "rgba(96,108,56,0.18)",
+          "rgba(221,161,94,0.2)"
+        ]
+      },
+      {
+        "type": "flowers",
+        "items": [
+          {
+            "x": 100,
+            "y": 200,
+            "color": "#DDA15E",
+            "scale": 0.8
+          },
+          {
+            "x": 960,
+            "y": 240,
+            "color": "#606C38",
+            "scale": 0.9
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "polaroid",
+      "x": 540,
+      "y": 520,
+      "w": 540,
+      "h": 600,
+      "rotation": -4,
+      "caption": "BLOOM",
+      "borderColor": "#FEFAE0",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 110,
+      "fontFamily": "Playfair Display",
+      "fontSize": 28,
+      "fontStyle": "700",
+      "fill": "#283618",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Great Vibes",
+      "fontSize": 64,
+      "fill": "#6B4226",
+      "align": "center"
+    },
+    "wish": "In the garden of this new year, may every wish you whispered take root and rise. You deserve a life as lovely as the one you help others grow.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1160,
+      "width": 840,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#283618",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 27,
+    "slug": "garden-magazine",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Garden Magazine Cover",
+    "canvas": {
+      "width": 1080,
+      "height": 1440
+    },
+    "layout": "magazine-garden-cover",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FAF4F0"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "block",
+        "x": 0,
+        "y": 0,
+        "w": 1080,
+        "h": 140,
+        "color": "#6B8F71"
+      },
+      {
+        "type": "block",
+        "x": 0,
+        "y": 1320,
+        "w": 1080,
+        "h": 120,
+        "color": "#E8B4B8"
+      }
+    ],
+    "photo": {
+      "frame": "square",
+      "x": 70,
+      "y": 200,
+      "w": 940,
+      "h": 780,
+      "borderWidth": 0,
+      "borderColor": "#fff"
+    },
+    "headline": {
+      "text": "BLOOM",
+      "x": 540,
+      "y": 50,
+      "fontFamily": "Playfair Display",
+      "fontSize": 52,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 16,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1060,
+      "fontFamily": "Allura",
+      "fontSize": 68,
+      "fill": "#6D2E46",
+      "align": "center"
+    },
+    "wish": "May your birthday be wrapped in petals of peace and ribbons of hope. Let this year be gentle with you, and let you be brave with it.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1340,
+      "width": 900,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 18,
+      "fontStyle": "italic",
+      "fill": "#3D405B",
+      "align": "center",
+      "lineHeight": 1.4
+    }
+  },
+  {
+    "id": 28,
+    "slug": "story-soft-florals",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Soft Floral Story",
+    "canvas": {
+      "width": 1080,
+      "height": 1920
+    },
+    "layout": "story-floral-wreath",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#FFF0F3",
+        "#FDE2E4",
+        "#E2ECE9"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "wreath",
+        "x": 540,
+        "y": 700,
+        "radius": 290,
+        "colors": [
+          "#E8B4B8",
+          "#A3B18A",
+          "#D8A48F",
+          "#F4ACB7"
+        ]
+      },
+      {
+        "type": "petals",
+        "count": 16,
+        "seed": 281,
+        "colors": [
+          "#E8B4B8"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 700,
+      "w": 460,
+      "h": 460,
+      "borderWidth": 12,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "A GENTLE CELEBRATION",
+      "x": 540,
+      "y": 220,
+      "fontFamily": "Cinzel",
+      "fontSize": 18,
+      "fill": "#6D597A",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1080,
+      "fontFamily": "Great Vibes",
+      "fontSize": 76,
+      "fill": "#9B2335",
+      "align": "center"
+    },
+    "wish": "Some souls arrive like spring — they make everything around them come alive. Today we celebrate you, and the quiet magic you bring to every room.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1520,
+      "width": 820,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 24,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 29,
+    "slug": "floating-peony-card",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Floating Peony Card",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floating-peony-invite",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#D8E2DC",
+        "#FFE5D9",
+        "#FFCAD4"
+      ],
+      "angle": 160
+    },
+    "decorations": [
+      {
+        "type": "flowers",
+        "items": [
+          {
+            "x": 80,
+            "y": 80,
+            "color": "#F4ACB7",
+            "scale": 1.3
+          },
+          {
+            "x": 980,
+            "y": 100,
+            "color": "#A3B18A",
+            "scale": 1.1
+          },
+          {
+            "x": 60,
+            "y": 1180,
+            "color": "#D8A48F",
+            "scale": 1
+          },
+          {
+            "x": 990,
+            "y": 1160,
+            "color": "#E8B4B8",
+            "scale": 1.15
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 430,
+      "w": 360,
+      "h": 360,
+      "borderWidth": 8,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      },
+      "card": {
+        "x": 130,
+        "y": 150,
+        "w": 820,
+        "h": 1050,
+        "fill": "#FFFBFA",
+        "radius": 32,
+        "stroke": "rgba(232,180,184,0.5)"
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 210,
+      "fontFamily": "Cinzel",
+      "fontSize": 16,
+      "fill": "#6B8F71",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 700,
+      "fontFamily": "Playfair Display",
+      "fontSize": 52,
+      "fontStyle": "italic 700",
+      "fill": "#6D2E46",
+      "align": "center"
+    },
+    "wish": "May love settle around you like morning light on flowers. Wishing you a year of elegance, ease, and the kind of happiness that feels like home.",
+    "wishStyle": {
+      "x": 540,
+      "y": 940,
+      "width": 700,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 20,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 30,
+    "slug": "oval-floral-frame",
+    "category": "floral-elegant",
+    "categoryLabel": "Floral Elegant",
+    "name": "Oval Floral Frame",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floral-oval",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FBF8F4"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "wreath",
+        "x": 540,
+        "y": 460,
+        "radius": 280,
+        "colors": [
+          "#BC6C25",
+          "#606C38",
+          "#DDA15E",
+          "#E8B4B8"
+        ],
+        "oval": true
+      }
+    ],
+    "photo": {
+      "frame": "oval",
+      "x": 540,
+      "y": 460,
+      "w": 380,
+      "h": 480,
+      "borderWidth": 8,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 90,
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 26,
+      "fontStyle": "700",
+      "fill": "#283618",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 820,
+      "fontFamily": "Allura",
+      "fontSize": 70,
+      "fill": "#6B4226",
+      "align": "center"
+    },
+    "wish": "Bloom where you are, and then bloom further. May this birthday remind you that your most beautiful season is still unfolding.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1060,
+      "width": 820,
+      "fontFamily": "Libre Baskerville",
+      "fontSize": 22,
+      "fontStyle": "italic",
+      "fill": "#6D597A",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 31,
+    "slug": "cartoon-star-circle",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Cartoon Star Circle",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "center-cartoon-circle",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#7BDFF2",
+        "#B5E48C",
+        "#FFD166"
+      ],
+      "angle": 140
+    },
+    "decorations": [
+      {
+        "type": "stars",
+        "count": 18,
+        "seed": 311,
+        "colors": [
+          "#FF6B9D",
+          "#FFE66D",
+          "#FFFFFF",
+          "#9B5DE5"
+        ]
+      },
+      {
+        "type": "faces",
+        "items": [
+          {
+            "x": 90,
+            "y": 160,
+            "color": "#FF6B9D"
+          },
+          {
+            "x": 960,
+            "y": 200,
+            "color": "#4CC9F0"
+          },
+          {
+            "x": 80,
+            "y": 1080,
+            "color": "#FEE440"
+          },
+          {
+            "x": 970,
+            "y": 1120,
+            "color": "#9B5DE5"
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 430,
+      "w": 420,
+      "h": 420,
+      "borderWidth": 16,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "YAY! IT'S YOUR DAY",
+      "x": 540,
+      "y": 110,
+      "fontFamily": "Fredoka",
+      "fontSize": 36,
+      "fontStyle": "700",
+      "fill": "#073B4C",
+      "letterSpacing": 2,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 720,
+      "fontFamily": "Fredoka",
+      "fontSize": 64,
+      "fontStyle": "700",
+      "fill": "#EF476F",
+      "align": "center",
+      "shadowColor": "rgba(255,255,255,0.7)",
+      "shadowBlur": 8
+    },
+    "wish": "Today the whole universe is throwing you a party. May your birthday be packed with giggles, cake crumbs, wild dances, and the happiest kind of chaos.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1020,
+      "width": 840,
+      "fontFamily": "Nunito",
+      "fontSize": 22,
+      "fontStyle": "700",
+      "fill": "#26547C",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 32,
+    "slug": "kids-balloon-left",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Kids Balloon Left",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "left-kids-ribbon-column",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FFF0F6"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "balloons",
+        "items": [
+          {
+            "x": 700,
+            "y": 140,
+            "color": "#FF6B9D",
+            "scale": 1.1
+          },
+          {
+            "x": 860,
+            "y": 220,
+            "color": "#7BDFF2",
+            "scale": 0.9
+          },
+          {
+            "x": 740,
+            "y": 400,
+            "color": "#FEE440",
+            "scale": 0.75
+          },
+          {
+            "x": 920,
+            "y": 480,
+            "color": "#B388EB",
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 60,
+        "seed": 321,
+        "colors": [
+          "#FF6B9D",
+          "#7BDFF2",
+          "#FEE440",
+          "#B388EB"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "ribbon",
+      "x": 40,
+      "y": 80,
+      "w": 500,
+      "h": 1190,
+      "borderWidth": 12,
+      "borderColor": "#FF6B9D",
+      "ribbonColor": "#FEE440",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "PARTY TIME",
+      "x": 800,
+      "y": 700,
+      "fontFamily": "Fredoka",
+      "fontSize": 40,
+      "fontStyle": "700",
+      "fill": "#5A189A",
+      "letterSpacing": 2,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 800,
+      "y": 800,
+      "width": 480,
+      "fontFamily": "Pacifico",
+      "fontSize": 48,
+      "fill": "#FF006E",
+      "align": "center"
+    },
+    "wish": "Superstars, superheroes, and super birthdays — you get all three. May this year be your biggest adventure, with extra sprinkles on top.",
+    "wishStyle": {
+      "x": 800,
+      "y": 1040,
+      "width": 440,
+      "fontFamily": "Nunito",
+      "fontSize": 18,
+      "fontStyle": "700",
+      "fill": "#5A189A",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 33,
+    "slug": "candy-right-land",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Candy Right Land",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "right-candy-rounded",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#FF9A8B",
+        "#FF6A88",
+        "#FF99AC"
+      ],
+      "angle": 160
+    },
+    "decorations": [
+      {
+        "type": "polka",
+        "seed": 331,
+        "colors": [
+          "rgba(255,255,255,0.35)",
+          "rgba(255,230,109,0.4)"
+        ]
+      },
+      {
+        "type": "faces",
+        "items": [
+          {
+            "x": 120,
+            "y": 180,
+            "color": "#7BDFF2"
+          },
+          {
+            "x": 260,
+            "y": 1100,
+            "color": "#FEE440"
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 40,
+      "x": 500,
+      "y": 120,
+      "w": 540,
+      "h": 780,
+      "borderWidth": 10,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "SWEETEST DAY",
+      "x": 260,
+      "y": 220,
+      "fontFamily": "Fredoka",
+      "fontSize": 32,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 2,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 260,
+      "y": 400,
+      "width": 440,
+      "fontFamily": "Fredoka",
+      "fontSize": 52,
+      "fontStyle": "700",
+      "fill": "#FEE440",
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.2)",
+      "shadowBlur": 8
+    },
+    "wish": "Make a wish, close your eyes, and know that the world is already cheering for you. Happy Birthday to the coolest, kindest, most wonderful you.",
+    "wishStyle": {
+      "x": 260,
+      "y": 980,
+      "width": 440,
+      "fontFamily": "Nunito",
+      "fontSize": 18,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 34,
+    "slug": "fullscreen-playful",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Fullscreen Playful Overlay",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "fullscreen-bunting-overlay",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FFBE0B"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "bunting",
+        "y": 40,
+        "colors": [
+          "#FF006E",
+          "#8338EC",
+          "#3A86FF",
+          "#FB5607"
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 80,
+        "seed": 341
+      }
+    ],
+    "photo": {
+      "frame": "full",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1350,
+      "overlay": "linear",
+      "overlayColors": [
+        "rgba(255,0,110,0.05)",
+        "rgba(58,134,255,0.55)"
+      ],
+      "overlayAngle": 180
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 860,
+      "fontFamily": "Fredoka",
+      "fontSize": 48,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 4,
+      "align": "center",
+      "shadowColor": "#8338EC",
+      "shadowBlur": 16
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 940,
+      "fontFamily": "Pacifico",
+      "fontSize": 64,
+      "fill": "#FEE440",
+      "align": "center"
+    },
+    "wish": "Confetti in the sky, joy in your pocket, and a whole year of awesome waiting just around the corner. Let's go, birthday legend!",
+    "wishStyle": {
+      "x": 540,
+      "y": 1140,
+      "width": 860,
+      "fontFamily": "Nunito",
+      "fontSize": 22,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 35,
+    "slug": "star-frame-hero",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Star Frame Hero",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "star-frame",
+    "background": {
+      "type": "radial",
+      "colors": [
+        "#9B5DE5",
+        "#3A0CA3",
+        "#240046"
+      ],
+      "x": 0.5,
+      "y": 0.4,
+      "radius": 0.9
+    },
+    "decorations": [
+      {
+        "type": "stars",
+        "count": 30,
+        "seed": 351,
+        "colors": [
+          "#FEE440",
+          "#FFFFFF",
+          "#FF6B9D",
+          "#7BDFF2"
+        ]
+      },
+      {
+        "type": "sparkles",
+        "count": 24,
+        "seed": 352,
+        "color": "#FEE440"
+      }
+    ],
+    "photo": {
+      "frame": "star",
+      "x": 540,
+      "y": 460,
+      "w": 480,
+      "h": 480,
+      "borderWidth": 10,
+      "borderColor": "#FEE440",
+      "shadow": {
+        "blur": 30,
+        "color": "rgba(254,228,64,0.45)",
+        "offsetY": 8
+      }
+    },
+    "headline": {
+      "text": "SUPERSTAR",
+      "x": 540,
+      "y": 90,
+      "fontFamily": "Righteous",
+      "fontSize": 48,
+      "fill": "#FEE440",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 820,
+      "fontFamily": "Fredoka",
+      "fontSize": 60,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "You make ordinary days feel like festivals. May this birthday be louder, brighter, and sweeter than all the ones before — because you deserve that kind of magic.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1060,
+      "width": 840,
+      "fontFamily": "Nunito",
+      "fontSize": 22,
+      "fontStyle": "700",
+      "fill": "#E0AAFF",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 36,
+    "slug": "polaroid-stickers",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Polaroid Stickers",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "polaroid-sticker-burst",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#48CAE4",
+        "#90E0EF",
+        "#FFC8DD"
+      ],
+      "angle": 130
+    },
+    "decorations": [
+      {
+        "type": "stickers",
+        "seed": 361
+      },
+      {
+        "type": "confetti",
+        "count": 40,
+        "seed": 362,
+        "colors": [
+          "#FF6B9D",
+          "#FEE440",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "polaroid",
+      "x": 540,
+      "y": 520,
+      "w": 560,
+      "h": 620,
+      "rotation": 5,
+      "caption": "BEST DAY EVER",
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 110,
+      "fontFamily": "Fredoka",
+      "fontSize": 44,
+      "fontStyle": "700",
+      "fill": "#023E8A",
+      "letterSpacing": 2,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Pacifico",
+      "fontSize": 52,
+      "fill": "#C9184A",
+      "align": "center"
+    },
+    "wish": "High-fives, happy tears, and a cake that's almost too pretty to eat. May your year be filled with play, wonder, and friends who feel like sunshine.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1160,
+      "width": 860,
+      "fontFamily": "Nunito",
+      "fontSize": 20,
+      "fontStyle": "700",
+      "fill": "#023E8A",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 37,
+    "slug": "comic-cover",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Comic Birthday Cover",
+    "canvas": {
+      "width": 1080,
+      "height": 1440
+    },
+    "layout": "magazine-comic-cover",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FFBE0B"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "halftone",
+        "color": "rgba(0,0,0,0.08)"
+      },
+      {
+        "type": "block",
+        "x": 40,
+        "y": 40,
+        "w": 1000,
+        "h": 1360,
+        "color": "transparent",
+        "stroke": "#111",
+        "strokeWidth": 10
+      },
+      {
+        "type": "burst-badge",
+        "x": 900,
+        "y": 220,
+        "text": "WOW",
+        "color": "#FF006E"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 8,
+      "x": 90,
+      "y": 240,
+      "w": 900,
+      "h": 720,
+      "borderWidth": 8,
+      "borderColor": "#111111",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "BIRTHDAY COMICS",
+      "x": 540,
+      "y": 80,
+      "fontFamily": "Bebas Neue",
+      "fontSize": 64,
+      "fill": "#111111",
+      "letterSpacing": 4,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1040,
+      "fontFamily": "Bebas Neue",
+      "fontSize": 72,
+      "fill": "#111111",
+      "align": "center"
+    },
+    "wish": "If happiness had a face, it would look a lot like yours today. Wishing you cartoons, cupcakes, and a year that never runs out of fun.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1280,
+      "width": 880,
+      "fontFamily": "Nunito",
+      "fontSize": 20,
+      "fontStyle": "800",
+      "fill": "#111111",
+      "align": "center",
+      "lineHeight": 1.4
+    }
+  },
+  {
+    "id": 38,
+    "slug": "story-cartoon-parade",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Cartoon Parade Story",
+    "canvas": {
+      "width": 1080,
+      "height": 1920
+    },
+    "layout": "story-cartoon-parade",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#FF6B9D",
+        "#FFD166",
+        "#7BDFF2"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "bunting",
+        "y": 60,
+        "colors": [
+          "#FFFFFF",
+          "#9B5DE5",
+          "#FEE440",
+          "#3A86FF"
+        ]
+      },
+      {
+        "type": "faces",
+        "items": [
+          {
+            "x": 80,
+            "y": 240,
+            "color": "#FEE440"
+          },
+          {
+            "x": 960,
+            "y": 280,
+            "color": "#9B5DE5"
+          },
+          {
+            "x": 90,
+            "y": 1680,
+            "color": "#7BDFF2"
+          },
+          {
+            "x": 960,
+            "y": 1720,
+            "color": "#FF6B9D"
+          }
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 70,
+        "seed": 381
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 720,
+      "w": 500,
+      "h": 500,
+      "borderWidth": 18,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "IT'S PARTY O'CLOCK",
+      "x": 540,
+      "y": 260,
+      "fontFamily": "Fredoka",
+      "fontSize": 32,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 2,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1100,
+      "fontFamily": "Fredoka",
+      "fontSize": 68,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "align": "center",
+      "shadowColor": "rgba(0,0,0,0.2)",
+      "shadowBlur": 10
+    },
+    "wish": "Blast off into a brand-new year of discoveries. May you collect laughs like stickers and memories like treasures. Happy Birthday, superstar!",
+    "wishStyle": {
+      "x": 540,
+      "y": 1520,
+      "width": 840,
+      "fontFamily": "Nunito",
+      "fontSize": 24,
+      "fontStyle": "700",
+      "fill": "#073B4C",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 39,
+    "slug": "floating-toy-card",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Floating Toy Card",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floating-toy-white-card",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#3A86FF",
+        "#8338EC",
+        "#FF006E"
+      ],
+      "angle": 145
+    },
+    "decorations": [
+      {
+        "type": "stars",
+        "count": 16,
+        "seed": 391,
+        "colors": [
+          "#FEE440",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 50,
+        "seed": 392
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 36,
+      "x": 200,
+      "y": 240,
+      "w": 680,
+      "h": 500,
+      "borderWidth": 8,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      },
+      "card": {
+        "x": 120,
+        "y": 140,
+        "w": 840,
+        "h": 1070,
+        "fill": "#FFFFFF",
+        "radius": 40,
+        "stroke": "transparent"
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 790,
+      "fontFamily": "Fredoka",
+      "fontSize": 22,
+      "fontStyle": "700",
+      "fill": "#8338EC",
+      "letterSpacing": 4,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 840,
+      "fontFamily": "Pacifico",
+      "fontSize": 52,
+      "fill": "#FF006E",
+      "align": "center"
+    },
+    "wish": "The world is better, brighter, and a little more sparkly because you are in it. Celebrate big — this day was made just for you.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1020,
+      "width": 720,
+      "fontFamily": "Nunito",
+      "fontSize": 20,
+      "fontStyle": "700",
+      "fill": "#3A0CA3",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 40,
+    "slug": "giftbox-portrait",
+    "category": "kids-fun",
+    "categoryLabel": "Kids Birthday Fun",
+    "name": "Gift Box Portrait",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "giftbox-frame",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#90E0EF",
+        "#CAF0F8",
+        "#FFE5EC"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "balloons",
+        "items": [
+          {
+            "x": 70,
+            "y": 120,
+            "color": "#FF6B9D",
+            "scale": 0.85
+          },
+          {
+            "x": 980,
+            "y": 160,
+            "color": "#FEE440",
+            "scale": 0.8
+          }
+        ]
+      },
+      {
+        "type": "confetti",
+        "count": 40,
+        "seed": 401
+      }
+    ],
+    "photo": {
+      "frame": "giftbox",
+      "x": 540,
+      "y": 520,
+      "w": 460,
+      "h": 460,
+      "boxColor": "#FF6B9D",
+      "ribbonColor": "#FEE440",
+      "borderWidth": 0,
+      "borderColor": "#FF6B9D",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "A GIFT OF A PERSON",
+      "x": 540,
+      "y": 100,
+      "fontFamily": "Fredoka",
+      "fontSize": 32,
+      "fontStyle": "700",
+      "fill": "#023E8A",
+      "letterSpacing": 2,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 900,
+      "fontFamily": "Fredoka",
+      "fontSize": 58,
+      "fontStyle": "700",
+      "fill": "#C9184A",
+      "align": "center"
+    },
+    "wish": "May your birthday be a parade of everything you love. Keep dreaming in color, laughing out loud, and believing in the magic you already are.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1100,
+      "width": 840,
+      "fontFamily": "Nunito",
+      "fontSize": 22,
+      "fontStyle": "700",
+      "fill": "#023E8A",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 41,
+    "slug": "insta-center-glow",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Insta Center Glow",
+    "canvas": {
+      "width": 1080,
+      "height": 1080
+    },
+    "layout": "square-center-glow",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#F58529",
+        "#DD2A7B",
+        "#8134AF",
+        "#515BD4"
+      ],
+      "angle": 135
+    },
+    "decorations": [
+      {
+        "type": "rings",
+        "x": 540,
+        "y": 470,
+        "radii": [
+          230,
+          250
+        ],
+        "colors": [
+          "rgba(255,255,255,0.5)",
+          "rgba(255,255,255,0.2)"
+        ]
+      },
+      {
+        "type": "sparkles",
+        "count": 20,
+        "seed": 411,
+        "color": "#FFFFFF"
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 470,
+      "w": 400,
+      "h": 400,
+      "borderWidth": 8,
+      "borderColor": "#FFFFFF",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 80,
+      "fontFamily": "Outfit",
+      "fontSize": 18,
+      "fontStyle": "800",
+      "fill": "#FFFFFF",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 740,
+      "fontFamily": "Outfit",
+      "fontSize": 48,
+      "fontStyle": "800",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "New year, same icon. May this birthday hit different — more glow, more growth, and a feed full of moments worth remembering.",
+    "wishStyle": {
+      "x": 540,
+      "y": 900,
+      "width": 860,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#FFE5EC",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 42,
+    "slug": "trendy-left-feed",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Trendy Left Feed",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "left-feed-editorial",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#0F0F0F"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "block",
+        "x": 540,
+        "y": 0,
+        "w": 540,
+        "h": 1350,
+        "color": "#111111"
+      },
+      {
+        "type": "accent-bar",
+        "x": 540,
+        "y": 0,
+        "w": 6,
+        "h": 1350,
+        "color": "#E1306C"
+      }
+    ],
+    "photo": {
+      "frame": "square",
+      "x": 0,
+      "y": 180,
+      "w": 540,
+      "h": 990,
+      "borderWidth": 0,
+      "borderColor": "#fff"
+    },
+    "headline": {
+      "text": "THE ERA",
+      "x": 810,
+      "y": 240,
+      "fontFamily": "Oswald",
+      "fontSize": 64,
+      "fontStyle": "700",
+      "fill": "#FFFFFF",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 810,
+      "y": 420,
+      "width": 460,
+      "fontFamily": "Outfit",
+      "fontSize": 44,
+      "fontStyle": "800",
+      "fill": "#E1306C",
+      "align": "center"
+    },
+    "wish": "This is your main-character era. May the year ahead be aesthetic, authentic, and absolutely unforgettable. Happy Birthday, legend.",
+    "wishStyle": {
+      "x": 810,
+      "y": 860,
+      "width": 430,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#BDBDBD",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 43,
+    "slug": "aesthetic-right",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Aesthetic Right",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "right-full-bleed-aesthetic",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#F2E9E4",
+        "#C9ADA7",
+        "#9A8C98"
+      ],
+      "angle": 90
+    },
+    "decorations": [
+      {
+        "type": "grid-lines",
+        "color": "rgba(34,34,59,0.08)"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 0,
+      "x": 500,
+      "y": 0,
+      "w": 580,
+      "h": 1350,
+      "borderWidth": 0,
+      "borderColor": "#fff"
+    },
+    "headline": {
+      "text": "SOFT LAUNCH: JOY",
+      "x": 250,
+      "y": 260,
+      "fontFamily": "Outfit",
+      "fontSize": 16,
+      "fontStyle": "800",
+      "fill": "#4A4E69",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 250,
+      "y": 420,
+      "width": 440,
+      "fontFamily": "Playfair Display",
+      "fontSize": 52,
+      "fontStyle": "italic 700",
+      "fill": "#22223B",
+      "align": "center"
+    },
+    "wish": "Soft light, strong energy, and a heart that's still becoming. May this chapter be your most photogenic and your most meaningful yet.",
+    "wishStyle": {
+      "x": 250,
+      "y": 900,
+      "width": 420,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#4A4E69",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 44,
+    "slug": "cinematic-fullscreen",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Cinematic Fullscreen",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "fullscreen-cinematic-grain",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#000"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "film-grain",
+        "opacity": 0.12
+      }
+    ],
+    "photo": {
+      "frame": "full",
+      "x": 0,
+      "y": 0,
+      "w": 1080,
+      "h": 1350,
+      "overlay": "linear",
+      "overlayColors": [
+        "rgba(0,0,0,0.05)",
+        "rgba(0,0,0,0.7)"
+      ],
+      "overlayAngle": 180
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 880,
+      "fontFamily": "Oswald",
+      "fontSize": 22,
+      "fill": "#FFFFFF",
+      "letterSpacing": 14,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 940,
+      "fontFamily": "Playfair Display",
+      "fontSize": 64,
+      "fontStyle": "italic 700",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "Here's to late-night talks, early-morning wins, and a year that looks as good as it feels. You are the moment — don't ever forget it.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1140,
+      "width": 860,
+      "fontFamily": "Poppins",
+      "fontSize": 20,
+      "fill": "#E5E5E5",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 45,
+    "slug": "rounded-square-post",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Rounded Square Post",
+    "canvas": {
+      "width": 1080,
+      "height": 1080
+    },
+    "layout": "rounded-square",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#1A1A2E",
+        "#16213E",
+        "#0F3460"
+      ],
+      "angle": 160
+    },
+    "decorations": [
+      {
+        "type": "blobs",
+        "items": [
+          {
+            "x": 80,
+            "y": 80,
+            "color": "#E94560",
+            "r": 90
+          },
+          {
+            "x": 980,
+            "y": 980,
+            "color": "#0F3460",
+            "r": 120
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 48,
+      "x": 190,
+      "y": 160,
+      "w": 700,
+      "h": 520,
+      "borderWidth": 0,
+      "borderColor": "#fff",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HBD",
+      "x": 540,
+      "y": 740,
+      "fontFamily": "Oswald",
+      "fontSize": 72,
+      "fontStyle": "700",
+      "fill": "#E94560",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 830,
+      "fontFamily": "Outfit",
+      "fontSize": 40,
+      "fontStyle": "800",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "May your notifications be blessings, your circle be real, and your next 365 days be a masterpiece you actually enjoy living.",
+    "wishStyle": {
+      "x": 540,
+      "y": 940,
+      "width": 860,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#A2D2FF",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 46,
+    "slug": "vintage-social-polaroid",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Vintage Social Polaroid",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "polaroid-vintage-social",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#EDE0D4"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "film-grain",
+        "opacity": 0.08
+      },
+      {
+        "type": "dots",
+        "count": 16,
+        "seed": 461,
+        "colors": [
+          "rgba(156,102,68,0.2)"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "polaroid",
+      "x": 540,
+      "y": 500,
+      "w": 560,
+      "h": 620,
+      "rotation": -3,
+      "caption": "ON THIS DAY",
+      "borderColor": "#FFF8F0",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 110,
+      "fontFamily": "Oswald",
+      "fontSize": 36,
+      "fill": "#9C6644",
+      "letterSpacing": 8,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Playfair Display",
+      "fontSize": 52,
+      "fontStyle": "italic 700",
+      "fill": "#7F5539",
+      "align": "center"
+    },
+    "wish": "Not just another trip around the sun — a whole new vibe. May you romanticize the little things and go unreasonably hard for the big ones.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1160,
+      "width": 840,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#9C6644",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 47,
+    "slug": "editorial-magazine",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Editorial Magazine",
+    "canvas": {
+      "width": 1080,
+      "height": 1440
+    },
+    "layout": "magazine-editorial-fullbleed",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#FFFFFF"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "block",
+        "x": 0,
+        "y": 0,
+        "w": 1080,
+        "h": 90,
+        "color": "#111111"
+      },
+      {
+        "type": "block",
+        "x": 0,
+        "y": 1350,
+        "w": 1080,
+        "h": 90,
+        "color": "#111111"
+      }
+    ],
+    "photo": {
+      "frame": "square",
+      "x": 0,
+      "y": 90,
+      "w": 1080,
+      "h": 900,
+      "borderWidth": 0,
+      "borderColor": "#000"
+    },
+    "headline": {
+      "text": "VOLUME 01  ·  THE BIRTHDAY EDIT",
+      "x": 540,
+      "y": 28,
+      "fontFamily": "Oswald",
+      "fontSize": 22,
+      "fill": "#FFFFFF",
+      "letterSpacing": 6,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1080,
+      "fontFamily": "Playfair Display",
+      "fontSize": 58,
+      "fontStyle": "700",
+      "fill": "#111111",
+      "align": "center"
+    },
+    "wish": "You don't need a filter. May this year be raw, radiant, and ridiculously kind to you. Happy Birthday to someone the algorithm could never capture.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1280,
+      "width": 900,
+      "fontFamily": "Poppins",
+      "fontSize": 18,
+      "fill": "#333",
+      "align": "center",
+      "lineHeight": 1.45
+    }
+  },
+  {
+    "id": 48,
+    "slug": "ig-story-gradient",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "IG Story Gradient",
+    "canvas": {
+      "width": 1080,
+      "height": 1920
+    },
+    "layout": "story-instagram-photo",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#0F0F0F",
+        "#1A1A2E",
+        "#E1306C"
+      ],
+      "angle": 180
+    },
+    "decorations": [
+      {
+        "type": "progress-bar",
+        "y": 36,
+        "color": "#FFFFFF"
+      },
+      {
+        "type": "sparkles",
+        "count": 18,
+        "seed": 481,
+        "color": "#FFFFFF"
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 32,
+      "x": 80,
+      "y": 220,
+      "w": 920,
+      "h": 920,
+      "borderWidth": 0,
+      "borderColor": "#fff",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "TODAY",
+      "x": 540,
+      "y": 1240,
+      "fontFamily": "Outfit",
+      "fontSize": 18,
+      "fontStyle": "800",
+      "fill": "#E1306C",
+      "letterSpacing": 12,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 1300,
+      "fontFamily": "Outfit",
+      "fontSize": 64,
+      "fontStyle": "800",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "Plot twist: the best is still loading. May your birthday be the start of a story so good you'll want to screenshot every page.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1600,
+      "width": 840,
+      "fontFamily": "Poppins",
+      "fontSize": 22,
+      "fill": "#F8BBD0",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 49,
+    "slug": "glass-floating-social",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Glass Floating Social",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "floating-glassmorphism",
+    "background": {
+      "type": "linear",
+      "colors": [
+        "#667EEA",
+        "#764BA2",
+        "#F093FB"
+      ],
+      "angle": 135
+    },
+    "decorations": [
+      {
+        "type": "blobs",
+        "items": [
+          {
+            "x": 120,
+            "y": 180,
+            "color": "rgba(255,255,255,0.18)",
+            "r": 140
+          },
+          {
+            "x": 900,
+            "y": 1100,
+            "color": "rgba(255,255,255,0.15)",
+            "r": 180
+          }
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "circle",
+      "x": 540,
+      "y": 430,
+      "w": 340,
+      "h": 340,
+      "borderWidth": 6,
+      "borderColor": "rgba(255,255,255,0.7)",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      },
+      "card": {
+        "x": 110,
+        "y": 150,
+        "w": 860,
+        "h": 1050,
+        "fill": "rgba(255,255,255,0.16)",
+        "radius": 36,
+        "stroke": "rgba(255,255,255,0.35)"
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 220,
+      "fontFamily": "Outfit",
+      "fontSize": 16,
+      "fontStyle": "800",
+      "fill": "#FFFFFF",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 700,
+      "fontFamily": "Playfair Display",
+      "fontSize": 56,
+      "fontStyle": "italic 700",
+      "fill": "#FFFFFF",
+      "align": "center"
+    },
+    "wish": "Stay golden, stay curious, stay you. Wishing you a year of city lights, quiet wins, and the kind of joy that doesn't need an audience.",
+    "wishStyle": {
+      "x": 540,
+      "y": 940,
+      "width": 720,
+      "fontFamily": "Poppins",
+      "fontSize": 20,
+      "fill": "#F8F7FF",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  },
+  {
+    "id": 50,
+    "slug": "layered-collage",
+    "category": "modern-social",
+    "categoryLabel": "Modern Social",
+    "name": "Layered Collage",
+    "canvas": {
+      "width": 1080,
+      "height": 1350
+    },
+    "layout": "collage",
+    "background": {
+      "type": "solid",
+      "colors": [
+        "#111111"
+      ]
+    },
+    "decorations": [
+      {
+        "type": "offset-frames",
+        "colors": [
+          "#E1306C",
+          "#F77737",
+          "#FCAF45"
+        ]
+      }
+    ],
+    "photo": {
+      "frame": "rounded",
+      "radius": 12,
+      "x": 220,
+      "y": 260,
+      "w": 640,
+      "h": 640,
+      "borderWidth": 0,
+      "borderColor": "#fff",
+      "shadow": {
+        "blur": 36,
+        "color": "rgba(0,0,0,0.32)",
+        "offsetY": 16,
+        "offsetX": 0
+      }
+    },
+    "headline": {
+      "text": "HAPPY BIRTHDAY",
+      "x": 540,
+      "y": 120,
+      "fontFamily": "Oswald",
+      "fontSize": 36,
+      "fill": "#FFFFFF",
+      "letterSpacing": 10,
+      "align": "center"
+    },
+    "nameStyle": {
+      "x": 540,
+      "y": 980,
+      "fontFamily": "Outfit",
+      "fontSize": 52,
+      "fontStyle": "800",
+      "fill": "#FCAF45",
+      "align": "center"
+    },
+    "wish": "This is your reminder that you are allowed to take up space, take your time, and take the year by storm. Happy Birthday — go be iconic.",
+    "wishStyle": {
+      "x": 540,
+      "y": 1140,
+      "width": 860,
+      "fontFamily": "Poppins",
+      "fontSize": 20,
+      "fill": "#E5E5E5",
+      "align": "center",
+      "lineHeight": 1.5
+    }
+  }
+]

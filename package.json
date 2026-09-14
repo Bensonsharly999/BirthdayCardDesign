@@ -1,0 +1,16 @@
+{
+  "name": "wishcraft-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WishCraft AI — generate 50 premium birthday wish cards from a photo and a name",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "install:all": "npm install --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

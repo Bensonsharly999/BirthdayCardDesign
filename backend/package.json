@@ -1,0 +1,25 @@
+{
+  "name": "wishcraft-ai-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WishCraft AI REST API",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/database/seed.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "multer": "^2.0.2",
+    "sql.js": "^1.12.0"
+  }
+}
