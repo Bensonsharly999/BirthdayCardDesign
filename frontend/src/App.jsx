@@ -43,9 +43,9 @@ export default function App() {
     setStatus('Clearing the photo background…');
     try {
       await document.fonts.ready.catch(() => {});
-      const isolated = await isolateSubject(file, (value) => {
+      const isolated = await isolateSubject(file, (value, message) => {
         setProgress(value);
-        setStatus('Clearing the photo background…');
+        setStatus(message || 'Clearing the photo background…');
       });
       setCutoutUrl((prev) => {
         if (prev) URL.revokeObjectURL(prev);
@@ -58,11 +58,7 @@ export default function App() {
       setProgress(100);
       setView('studio');
     } catch (err) {
-      setError(
-        err.message?.includes('publicPath') || err.message?.includes('fetch')
-          ? 'Could not download the background-removal model. Check your internet and try again.'
-          : 'Could not clear the photo background. Please try a clearer photo of one person, then generate again.',
-      );
+      setError(err.message || 'Could not create cards. Please try again with another photo.');
     } finally {
       setLoading(false);
       setProgress(8);

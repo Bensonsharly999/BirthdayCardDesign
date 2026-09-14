@@ -1,5 +1,7 @@
 import { removeBackground } from '@imgly/background-removal';
 
+const CUTOUT_TIMEOUT_MS = 45000;
+
 function loadImage(src) {
   return new Promise((resolve, reject) => {
     const img = new window.Image();
@@ -20,11 +22,32 @@ function canvasToBlob(canvas, type = 'image/png', quality = 0.95) {
   });
 }
 
+function withTimeout(promise, ms, label = 'Background removal timed out') {
+  return new Promise((resolve, reject) => {
+    const timer = window.setTimeout(() => reject(new Error(label)), ms);
+    promise.then(
+      (value) => {
+        window.clearTimeout(timer);
+        resolve(value);
+      },
+      (err) => {
+        window.clearTimeout(timer);
+        reject(err);
+      },
+    );
+  });
+}
+
+function modelPublicPath() {
+  const base = `${window.location.origin}${import.meta.env.BASE_URL || '/'}`;
+  return new URL('imgly/', base.endsWith('/') ? base : `${base}/`).href;
+}
+
 async function prepareImage(file) {
   const url = URL.createObjectURL(file);
   try {
     const img = await loadImage(url);
-    const max = 1600;
+    const max = 1280;
     const scale = Math.min(1, max / Math.max(img.width, img.height));
     if (scale >= 0.98) return file;
     const canvas = document.createElement('canvas');
@@ -187,40 +210,75 @@ async function refineCutout(blob) {
   }
 }
 
-async function runRemoval(source, onProgress) {
-  const attempts = [
-    { model: 'isnet_fp16', device: 'cpu' },
-    { model: 'isnet', device: 'cpu' },
+async function probePublicPath() {
+  const candidates = [
+    modelPublicPath(),
+    'https://staticimgly.com/@imgly/background-removal-data/1.7.0/dist/',
   ];
-  let lastError = null;
-  for (const attempt of attempts) {
+  for (const base of candidates) {
     try {
-      return await removeBackground(source, {
+      const ctrl = new AbortController();
+      const timer = window.setTimeout(() => ctrl.abort(), 5000);
+      const res = await fetch(new URL('resources.json', base).href, { signal: ctrl.signal });
+      window.clearTimeout(timer);
+      if (res.ok) return base;
+    } catch {
+      // try next host
+    }
+  }
+  return null;
+}
+
+async function runRemoval(source, onProgress) {
+  const publicPath = await probePublicPath();
+  if (!publicPath) throw new Error('Background model is not available');
+  try {
+    return await withTimeout(
+      removeBackground(source, {
         debug: false,
         rescale: true,
         proxyToWorker: false,
-        model: attempt.model,
-        device: attempt.device,
+        publicPath,
+        model: 'isnet_quint8',
+        device: 'cpu',
         output: { format: 'image/png', quality: 0.95 },
         progress: (key, current, total) => {
           if (!onProgress || !total) return;
           const ratio = Math.max(0, Math.min(1, current / total));
-          onProgress(Math.round(16 + ratio * 68), key);
+          const downloading = /fetch|download|wasm|model/i.test(String(key || ''));
+          onProgress(
+            Math.round(14 + ratio * 70),
+            downloading ? 'Downloading the photo model… first time can take a minute.' : 'Clearing the photo background…',
+          );
         },
-      });
-    } catch (err) {
-      lastError = err;
-    }
+      }),
+      CUTOUT_TIMEOUT_MS,
+    );
+  } catch (err) {
+    throw err || new Error('Background removal failed');
   }
-  throw lastError || new Error('Background removal failed');
+}
+
+async function originalPreview(file) {
+  return {
+    url: URL.createObjectURL(file),
+    cutout: false,
+  };
 }
 
 export async function isolateSubject(file, onProgress) {
-  const prepared = await prepareImage(file);
-  const raw = await runRemoval(prepared, onProgress);
-  const trimmed = await refineCutout(raw);
-  return {
-    url: URL.createObjectURL(trimmed),
-    cutout: true,
-  };
+  onProgress?.(10, 'Preparing your photo…');
+  try {
+    const prepared = await prepareImage(file);
+    const raw = await runRemoval(prepared, onProgress);
+    onProgress?.(86, 'Cleaning the cutout…');
+    const trimmed = await refineCutout(raw);
+    return {
+      url: URL.createObjectURL(trimmed),
+      cutout: true,
+    };
+  } catch (err) {
+    console.warn('Background removal failed, using original photo', err);
+    return originalPreview(file);
+  }
 }

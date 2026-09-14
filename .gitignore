@@ -14,3 +14,6 @@ backend/data/*.db-journal
 .idea/
 coverage/
 *.local
+frontend/public/imgly/**
+!frontend/public/imgly/.gitkeep
+frontend/.imgly-tmp/
