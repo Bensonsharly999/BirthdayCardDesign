@@ -14,23 +14,25 @@ export function colorStops(colors = []) {
   return colors.flatMap((c, i) => [i / (colors.length - 1), c]);
 }
 
+function isRoundFrame(frame) {
+  return frame === 'circle' || frame === 'oval' || frame === 'balloon';
+}
+
 export function coverFit(image, boxW, boxH, frame) {
   const iw = image.width || 1;
   const ih = image.height || 1;
-  const round = frame === 'circle' || frame === 'oval';
-  const topGuard = round ? boxH * 0.08 : 0;
-  const fitH = Math.max(1, boxH - topGuard);
-  const scale = Math.max(boxW / iw, fitH / ih);
+  const extra = isRoundFrame(frame) ? 1.04 : 1;
+  const scale = Math.max(boxW / iw, boxH / ih) * extra;
   const width = iw * scale;
   const height = ih * scale;
   const x = (boxW - width) / 2;
-  let y = topGuard + (fitH - height) / 2;
-  if (height > fitH) y = topGuard;
+  const portrait = ih / iw > 1.05;
+  const y = portrait && height > boxH ? 0 : (boxH - height) / 2;
   return { width, height, x, y };
 }
 
 /** Fit a cut-out person inside a frame without stretching, keeping the head in view. */
-export function subjectFit(image, boxW, boxH, pad = 0.05) {
+export function subjectFit(image, boxW, boxH, pad = 0.04, frame) {
   const iw = image.width || 1;
   const ih = image.height || 1;
   const innerW = boxW * (1 - pad * 2);
@@ -42,13 +44,13 @@ export function subjectFit(image, boxW, boxH, pad = 0.05) {
     width,
     height,
     x: (boxW - width) / 2,
-    y: boxH * pad,
+    y: isRoundFrame(frame) ? (boxH - height) / 2 : boxH * pad,
   };
 }
 
-export function fitPhoto(image, boxW, boxH, cutout = false, pad = 0.03) {
+export function fitPhoto(image, boxW, boxH, cutout = false, pad = 0.04, frame) {
   if (!image) return null;
-  return cutout ? subjectFit(image, boxW, boxH, pad) : coverFit(image, boxW, boxH);
+  return cutout ? subjectFit(image, boxW, boxH, pad, frame) : coverFit(image, boxW, boxH, frame);
 }
 
 export function isCenterAnchor(frame) {

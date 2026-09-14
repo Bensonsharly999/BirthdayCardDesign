@@ -60,6 +60,7 @@ function copy(id) {
 
 function card(id, name, layout, fields) {
   const { quote2, wish } = copy(id);
+  const photo = fields.photo ? { opacity: 1, ...fields.photo } : fields.photo;
   return {
     id,
     slug: name.toLowerCase().replace(/\s+/g, '-'),
@@ -71,6 +72,7 @@ function card(id, name, layout, fields) {
     quote2,
     wish,
     ...fields,
+    photo,
   };
 }
 

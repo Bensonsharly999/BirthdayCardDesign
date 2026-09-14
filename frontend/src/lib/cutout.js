@@ -77,12 +77,12 @@ async function prepareImage(file) {
 function hardenAlpha(data) {
   for (let i = 3; i < data.length; i += 4) {
     const a = data[i];
-    if (a < 48) {
+    if (a < 36) {
       data[i] = 0;
-    } else if (a > 188) {
+    } else if (a > 140) {
       data[i] = 255;
     } else {
-      const t = (a - 48) / (188 - 48);
+      const t = (a - 36) / (140 - 36);
       const s = t * t * (3 - 2 * t);
       data[i] = Math.round(s * 255);
     }
@@ -206,9 +206,9 @@ function cropToSubject(canvas, ctx, padRatio = 0.03) {
     throw new Error('Could not find a person in the photo');
   }
 
-  const padX = Math.round(Math.max(subjectW * 0.08, width * padRatio));
-  const padTop = Math.round(Math.max(subjectH * 0.16, height * 0.04));
-  const padBottom = Math.round(Math.max(subjectH * 0.06, height * padRatio));
+  const padX = Math.round(Math.max(subjectW * 0.04, width * padRatio));
+  const padTop = Math.round(Math.max(subjectH * 0.06, height * 0.02));
+  const padBottom = Math.round(Math.max(subjectH * 0.04, height * padRatio));
   const sx = Math.max(0, minX - padX);
   const sy = Math.max(0, minY - padTop);
   const sw = Math.min(width - sx, subjectW + padX * 2);

@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Circle, Ellipse, Group, Image as KonvaImage, Layer, Line, Rect, RegularPolygon, Stage, Star, Text } from 'react-konva';
 import { Decorations } from './Decorations';
-import { clipShape, colorStops, coverFit, fitPhoto, gradientPoints, parseFontStyle, photoBox } from '../lib/geometry';
+import { clipShape, colorStops, fitPhoto, gradientPoints, parseFontStyle, photoBox } from '../lib/geometry';
 import { enhanceTemplate, estimateTextBox } from '../lib/readability';
 
 function useHtmlImage(src) {
@@ -105,24 +105,46 @@ function Background({ canvas, background, overlays = [] }) {
   return <Group>{fills}</Group>;
 }
 
+function PhotoImage({ image, fit, extra = {} }) {
+  if (!image || !fit) return null;
+  return (
+    <KonvaImage
+      image={image}
+      x={fit.x}
+      y={fit.y}
+      width={fit.width}
+      height={fit.height}
+      opacity={1}
+      perfectDrawEnabled={false}
+      listening={false}
+      {...extra}
+    />
+  );
+}
+
+function placePhoto(image, boxW, boxH, photo, cutout) {
+  return fitPhoto(image, boxW, boxH, cutout, photo?.pad ?? 0.04, photo?.frame);
+}
+
 function PhotoLayer({ photo, image, cutout = false }) {
   if (!photo) return null;
   const box = photoBox(photo);
   const framed = ['circle', 'oval', 'square', 'rounded', 'polaroid', 'line-frame', 'gold-rect', 'white-mat'].includes(
     photo.frame,
   );
-  const fit = image ? (framed ? coverFit(image, box.w, box.h, photo.frame) : fitPhoto(image, box.w, box.h, cutout)) : null;
+  const fit = placePhoto(image, box.w, box.h, photo, cutout);
   const shadow = photo.shadow || {};
   const card = photo.card;
-  const personShadow = cutout && !framed
-    ? { shadowBlur: 32, shadowColor: 'rgba(0,0,0,0.38)', shadowOffsetY: 16 }
-    : {};
+  const personShadow =
+    cutout && !framed ? { shadowBlur: 32, shadowColor: 'rgba(0,0,0,0.38)', shadowOffsetY: 16 } : {};
+  const opacity = photo.opacity ?? 1;
 
   const overlay =
     photo.overlay === 'linear' ? (
       <Rect
         width={box.w}
         height={box.h}
+        opacity={photo.overlayOpacity ?? 1}
         fillLinearGradientStartPoint={gradientPoints(photo.overlayAngle || 180, box.w, box.h).start}
         fillLinearGradientEndPoint={gradientPoints(photo.overlayAngle || 180, box.w, box.h).end}
         fillLinearGradientColorStops={colorStops(photo.overlayColors || ['transparent', 'rgba(0,0,0,0.6)'])}
@@ -130,31 +152,30 @@ function PhotoLayer({ photo, image, cutout = false }) {
     ) : null;
 
   if (photo.frame === 'line-frame') {
-    const innerFit = image ? coverFit(image, box.w, box.h, photo.frame) : null;
     const pad = photo.inset || 16;
+    const inner = { w: Math.max(1, box.w - pad * 2), h: Math.max(1, box.h - pad * 2) };
+    const innerFit = placePhoto(image, inner.w, inner.h, photo, cutout);
     return (
-      <Group x={box.x} y={box.y}>
-        <Group clipFunc={(ctx) => ctx.rect(0, 0, box.w, box.h)}>
-          <Rect width={box.w} height={box.h} fill={photo.fill || '#FFFFFF'} />
-          {image && innerFit && (
-            <KonvaImage
-              image={image}
-              x={innerFit.x}
-              y={innerFit.y}
-              width={innerFit.width}
-              height={innerFit.height}
-            />
-          )}
+      <Group x={box.x} y={box.y} opacity={opacity}>
+        <Rect width={box.w} height={box.h} fill={photo.fill || '#FFFFFF'} />
+        <Group x={pad} y={pad} clipFunc={(ctx) => ctx.rect(0, 0, inner.w, inner.h)}>
+          <Rect width={inner.w} height={inner.h} fill={photo.fill || '#FFFFFF'} />
+          <PhotoImage image={image} fit={innerFit} />
         </Group>
-        <Rect width={box.w} height={box.h} stroke={photo.borderColor || '#FFFFFF'} strokeWidth={photo.borderWidth || 3} listening={false} />
+        <Rect
+          width={box.w}
+          height={box.h}
+          stroke={photo.borderColor || '#FFFFFF'}
+          strokeWidth={photo.borderWidth || 3}
+          listening={false}
+        />
         <Rect
           x={pad}
           y={pad}
-          width={box.w - pad * 2}
-          height={box.h - pad * 2}
+          width={inner.w}
+          height={inner.h}
           stroke={photo.borderColor || '#FFFFFF'}
           strokeWidth={Math.max(1, (photo.borderWidth || 3) - 1)}
-          opacity={0.85}
           listening={false}
         />
       </Group>
@@ -162,20 +183,11 @@ function PhotoLayer({ photo, image, cutout = false }) {
   }
 
   if (photo.frame === 'blend') {
-    const innerFit = fitPhoto(image, box.w, box.h, cutout, photo.pad ?? 0.02);
-    const imageNode = image && innerFit && (
-      <KonvaImage
-        image={image}
-        x={innerFit.x}
-        y={innerFit.y}
-        width={innerFit.width}
-        height={innerFit.height}
-        {...personShadow}
-      />
-    );
+    const innerFit = placePhoto(image, box.w, box.h, photo, cutout);
+    const imageNode = <PhotoImage image={image} fit={innerFit} extra={personShadow} />;
     if (cutout) {
       return (
-        <Group x={box.x} y={box.y} listening={false}>
+        <Group x={box.x} y={box.y} opacity={opacity} listening={false}>
           {imageNode}
         </Group>
       );
@@ -184,6 +196,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
       <Group
         x={box.x}
         y={box.y}
+        opacity={opacity}
         listening={false}
         clipFunc={(ctx) => {
           const r = 36;
@@ -201,45 +214,13 @@ function PhotoLayer({ photo, image, cutout = false }) {
     );
   }
 
-  if (photo.frame === 'line-frame') {
-    const innerFit = image ? coverFit(image, box.w, box.h, photo.frame) : null;
-    const gap = photo.frameGap || 14;
-    return (
-      <Group x={box.x} y={box.y}>
-        <Group clipFunc={(ctx) => ctx.rect(0, 0, box.w, box.h)}>
-          <Rect width={box.w} height={box.h} fill={photo.fill || '#EAF4FB'} />
-          {image && innerFit && (
-            <KonvaImage
-              image={image}
-              x={innerFit.x}
-              y={innerFit.y}
-              width={innerFit.width}
-              height={innerFit.height}
-            />
-          )}
-        </Group>
-        <Rect width={box.w} height={box.h} stroke={photo.borderColor || '#FFFFFF'} strokeWidth={photo.borderWidth || 3} listening={false} />
-        <Rect
-          x={gap}
-          y={gap}
-          width={box.w - gap * 2}
-          height={box.h - gap * 2}
-          stroke={photo.borderColor || '#FFFFFF'}
-          strokeWidth={1.5}
-          opacity={0.85}
-          listening={false}
-        />
-      </Group>
-    );
-  }
-
   if (photo.frame === 'gold-rect' || photo.frame === 'white-mat') {
     const mat = photo.mat || '#FFFFFF';
     const pad = photo.matPad || 22;
-    const inner = { w: box.w - pad * 2, h: box.h - pad * 2 };
-    const innerFit = fitPhoto(image, inner.w, inner.h, cutout);
+    const inner = { w: Math.max(1, box.w - pad * 2), h: Math.max(1, box.h - pad * 2) };
+    const innerFit = placePhoto(image, inner.w, inner.h, photo, cutout);
     return (
-      <Group x={box.x} y={box.y}>
+      <Group x={box.x} y={box.y} opacity={opacity}>
         <Rect
           width={box.w}
           height={box.h}
@@ -259,16 +240,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
         />
         <Group x={pad} y={pad} clipFunc={(ctx) => ctx.rect(0, 0, inner.w, inner.h)}>
           <Rect width={inner.w} height={inner.h} fill={photo.fill || mat} />
-          {image && innerFit && (
-            <KonvaImage
-              image={image}
-              x={innerFit.x}
-              y={innerFit.y}
-              width={innerFit.width}
-              height={innerFit.height}
-              {...personShadow}
-            />
-          )}
+          <PhotoImage image={image} fit={innerFit} extra={personShadow} />
         </Group>
       </Group>
     );
@@ -277,10 +249,10 @@ function PhotoLayer({ photo, image, cutout = false }) {
   if (photo.frame === 'polaroid') {
     const tab = photo.tab || 78;
     const m = photo.matPad || 16;
-    const inner = { x: m, y: m, w: box.w - m * 2, h: box.h - tab };
-    const innerFit = image ? coverFit(image, inner.w, inner.h, photo.frame) : null;
+    const inner = { x: m, y: m, w: Math.max(1, box.w - m * 2), h: Math.max(1, box.h - tab - m) };
+    const innerFit = placePhoto(image, inner.w, inner.h, photo, cutout);
     return (
-      <Group x={photo.x} y={photo.y} rotation={photo.rotation || 0} offsetX={box.w / 2} offsetY={box.h / 2}>
+      <Group x={photo.x} y={photo.y} rotation={photo.rotation || 0} offsetX={box.w / 2} offsetY={box.h / 2} opacity={opacity}>
         <Rect
           width={box.w}
           height={box.h}
@@ -292,9 +264,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
         />
         <Group x={inner.x} y={inner.y} clipFunc={(ctx) => ctx.rect(0, 0, inner.w, inner.h)}>
           <Rect width={inner.w} height={inner.h} fill={photo.fill || '#E8DCC8'} />
-          {image && innerFit && (
-            <KonvaImage image={image} x={innerFit.x} y={innerFit.y} width={innerFit.width} height={innerFit.height} />
-          )}
+          <PhotoImage image={image} fit={innerFit} />
         </Group>
       </Group>
     );
@@ -303,8 +273,10 @@ function PhotoLayer({ photo, image, cutout = false }) {
   if (photo.frame === 'giftbox') {
     const ribbon = photo.ribbonColor || '#FEE440';
     const boxColor = photo.boxColor || '#FF6B9D';
+    const inner = { w: box.w - 36, h: box.h - 36 };
+    const innerFit = placePhoto(image, inner.w, inner.h, photo, cutout);
     return (
-      <Group>
+      <Group opacity={opacity}>
         {card && (
           <Rect
             x={card.x}
@@ -327,17 +299,11 @@ function PhotoLayer({ photo, image, cutout = false }) {
             shadowColor={shadow.color}
             shadowOffsetY={shadow.offsetY}
           />
-          <Group x={18} y={18} clipFunc={(ctx) => ctx.rect(0, 0, box.w - 36, box.h - 36)}>
-            {image && (
-              <KonvaImage
-                image={image}
-                {...fitPhoto(image, box.w - 36, box.h - 36, cutout)}
-                {...personShadow}
-              />
-            )}
+          <Group x={18} y={18} clipFunc={(ctx) => ctx.rect(0, 0, inner.w, inner.h)}>
+            <PhotoImage image={image} fit={innerFit} extra={personShadow} />
           </Group>
-          <Rect x={box.w / 2 - 22} y={0} width={44} height={box.h} fill={ribbon} opacity={0.92} />
-          <Rect x={0} y={box.h / 2 - 22} width={box.w} height={44} fill={ribbon} opacity={0.92} />
+          <Rect x={box.w / 2 - 22} y={0} width={44} height={box.h} fill={ribbon} />
+          <Rect x={0} y={box.h / 2 - 22} width={box.w} height={44} fill={ribbon} />
           <RegularPolygon x={box.w / 2} y={box.h / 2} sides={4} radius={28} fill={ribbon} />
         </Group>
       </Group>
@@ -347,8 +313,10 @@ function PhotoLayer({ photo, image, cutout = false }) {
   if (photo.frame === 'ribbon') {
     const ribbon = photo.ribbonColor || '#FEE440';
     const wrap = photo.borderColor || '#FF6B9D';
+    const inner = { w: box.w - 28, h: box.h - 28 };
+    const innerFit = placePhoto(image, inner.w, inner.h, photo, cutout);
     return (
-      <Group x={box.x} y={box.y}>
+      <Group x={box.x} y={box.y} opacity={opacity}>
         <Rect
           width={box.w}
           height={box.h}
@@ -358,10 +326,8 @@ function PhotoLayer({ photo, image, cutout = false }) {
           shadowColor={shadow.color}
           shadowOffsetY={shadow.offsetY}
         />
-        <Group x={14} y={14} clipFunc={(ctx) => ctx.rect(0, 0, box.w - 28, box.h - 28)}>
-          {image && (
-            <KonvaImage image={image} {...fitPhoto(image, box.w - 28, box.h - 28, cutout)} {...personShadow} />
-          )}
+        <Group x={14} y={14} clipFunc={(ctx) => ctx.rect(0, 0, inner.w, inner.h)}>
+          <PhotoImage image={image} fit={innerFit} extra={personShadow} />
         </Group>
         <Rect x={box.w / 2 - 18} y={0} width={36} height={box.h} fill={ribbon} />
         <Ellipse x={box.w / 2 - 28} y={36} radiusX={32} radiusY={20} fill={ribbon} />
@@ -374,7 +340,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
   if (photo.frame === 'balloon') {
     const color = photo.balloonColor || photo.borderColor || '#EF476F';
     return (
-      <Group x={photo.x} y={photo.y}>
+      <Group x={photo.x} y={photo.y} opacity={opacity}>
         <Line points={[0, box.h / 2, 8, box.h / 2 + 160]} stroke="rgba(40,40,40,0.4)" strokeWidth={2} />
         <Ellipse
           radiusX={box.w / 2 + 18}
@@ -384,21 +350,9 @@ function PhotoLayer({ photo, image, cutout = false }) {
           shadowColor={shadow.color}
           shadowOffsetY={shadow.offsetY}
         />
-        <Group
-          x={-box.w / 2}
-          y={-box.h / 2}
-          clipFunc={(ctx) => clipShape(ctx, 'circle', box.w, box.h)}
-        >
-          {image && fit && (
-            <KonvaImage
-              image={image}
-              x={fit.x}
-              y={fit.y}
-              width={fit.width}
-              height={fit.height}
-              {...personShadow}
-            />
-          )}
+        <Group x={-box.w / 2} y={-box.h / 2} clipFunc={(ctx) => clipShape(ctx, 'circle', box.w, box.h)}>
+          <Rect width={box.w} height={box.h} fill={photo.fill || color} />
+          <PhotoImage image={image} fit={fit} extra={personShadow} />
         </Group>
         <Circle x={-box.w / 2 + 70} y={-40} radius={28} fill="rgba(255,255,255,0.28)" />
         <RegularPolygon x={0} y={box.h / 2 + 18} sides={3} radius={16} fill={color} rotation={180} />
@@ -414,7 +368,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
         : 0;
 
   return (
-    <Group>
+    <Group opacity={opacity}>
       {card && (
         <Rect
           x={card.x}
@@ -448,16 +402,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
         }}
       >
         <Rect width={box.w} height={box.h} fill={photo.fill || 'transparent'} />
-        {image && fit && (
-          <KonvaImage
-            image={image}
-            x={fit.x}
-            y={fit.y}
-            width={fit.width}
-            height={fit.height}
-            {...personShadow}
-          />
-        )}
+        <PhotoImage image={image} fit={fit} extra={personShadow} />
         {overlay}
       </Group>
       {photo.borderWidth > 0 && photo.frame === 'circle' && (
@@ -478,11 +423,6 @@ function PhotoLayer({ photo, image, cutout = false }) {
           stroke={photo.borderColor}
           strokeWidth={photo.borderWidth}
         />
-      )}
-      {photo.borderWidth > 0 && photo.frame === 'heart' && (
-        <Group x={box.x} y={box.y} listening={false}>
-          <Rect width={box.w} height={box.h} strokeEnabled={false} />
-        </Group>
       )}
       {photo.borderWidth > 0 && photo.frame === 'star' && (
         <Star
