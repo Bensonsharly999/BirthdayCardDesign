@@ -44,22 +44,33 @@ function modelPublicPath() {
 }
 
 async function prepareImage(file) {
-  const url = URL.createObjectURL(file);
+  let source = null;
   try {
-    const img = await loadImage(url);
+    source = await createImageBitmap(file, { imageOrientation: 'from-image' });
+  } catch {
+    source = null;
+  }
+  if (!source) {
+    const url = URL.createObjectURL(file);
+    try {
+      source = await loadImage(url);
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+  }
+  try {
     const max = 1280;
-    const scale = Math.min(1, max / Math.max(img.width, img.height));
-    if (scale >= 0.98) return file;
+    const scale = Math.min(1, max / Math.max(source.width, source.height));
     const canvas = document.createElement('canvas');
-    canvas.width = Math.max(1, Math.round(img.width * scale));
-    canvas.height = Math.max(1, Math.round(img.height * scale));
+    canvas.width = Math.max(1, Math.round(source.width * scale));
+    canvas.height = Math.max(1, Math.round(source.height * scale));
     const ctx = canvas.getContext('2d');
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(source, 0, 0, canvas.width, canvas.height);
     return canvasToBlob(canvas, 'image/png');
   } finally {
-    URL.revokeObjectURL(url);
+    source.close?.();
   }
 }
 
@@ -89,6 +100,8 @@ function keepMainSubject(data, width, height) {
   const sizes = [0];
   const cxSums = [0];
   const cySums = [0];
+  const minYs = [0];
+  const maxYs = [0];
   let label = 0;
   const stack = [];
 
@@ -100,6 +113,8 @@ function keepMainSubject(data, width, height) {
       sizes[label] = 0;
       cxSums[label] = 0;
       cySums[label] = 0;
+      minYs[label] = height;
+      maxYs[label] = 0;
       stack.push(start);
       labels[start] = label;
       while (stack.length) {
@@ -109,6 +124,8 @@ function keepMainSubject(data, width, height) {
         sizes[label] += 1;
         cxSums[label] += px;
         cySums[label] += py;
+        if (py < minYs[label]) minYs[label] = py;
+        if (py > maxYs[label]) maxYs[label] = py;
         const neighbors = [p - 1, p + 1, p - width, p + width];
         for (let n = 0; n < 4; n += 1) {
           const q = neighbors[n];
@@ -144,8 +161,19 @@ function keepMainSubject(data, width, height) {
   const minKeep = total * 0.008;
   if (sizes[best] < minKeep) return;
 
+  const keep = new Set([best]);
+  const bodyCx = cxSums[best] / sizes[best];
+  const bodyTop = minYs[best];
+  for (let l = 1; l <= label; l += 1) {
+    if (l === best) continue;
+    const cx = cxSums[l] / sizes[l];
+    const nearX = Math.abs(cx - bodyCx) < width * 0.28;
+    const touchesHead = maxYs[l] >= bodyTop - height * 0.06 && minYs[l] <= bodyTop + height * 0.22;
+    if (nearX && touchesHead && sizes[l] > sizes[best] * 0.015) keep.add(l);
+  }
+
   for (let i = 0; i < total; i += 1) {
-    if (labels[i] && labels[i] !== best) {
+    if (labels[i] && !keep.has(labels[i])) {
       data[i * 4 + 3] = 0;
     }
   }
@@ -178,11 +206,13 @@ function cropToSubject(canvas, ctx, padRatio = 0.03) {
     throw new Error('Could not find a person in the photo');
   }
 
-  const pad = Math.round(Math.max(subjectW, subjectH) * padRatio);
-  const sx = Math.max(0, minX - pad);
-  const sy = Math.max(0, minY - pad);
-  const sw = Math.min(width - sx, subjectW + pad * 2);
-  const sh = Math.min(height - sy, subjectH + pad * 2);
+  const padX = Math.round(Math.max(subjectW * 0.08, width * padRatio));
+  const padTop = Math.round(Math.max(subjectH * 0.16, height * 0.04));
+  const padBottom = Math.round(Math.max(subjectH * 0.06, height * padRatio));
+  const sx = Math.max(0, minX - padX);
+  const sy = Math.max(0, minY - padTop);
+  const sw = Math.min(width - sx, subjectW + padX * 2);
+  const sh = Math.min(height - sy, subjectH + padTop + padBottom);
   const out = document.createElement('canvas');
   out.width = sw;
   out.height = sh;

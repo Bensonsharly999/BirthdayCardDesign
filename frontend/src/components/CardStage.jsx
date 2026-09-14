@@ -111,7 +111,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
   const framed = ['circle', 'oval', 'square', 'rounded', 'polaroid', 'line-frame', 'gold-rect', 'white-mat'].includes(
     photo.frame,
   );
-  const fit = image ? (framed ? coverFit(image, box.w, box.h) : fitPhoto(image, box.w, box.h, cutout)) : null;
+  const fit = image ? (framed ? coverFit(image, box.w, box.h, photo.frame) : fitPhoto(image, box.w, box.h, cutout)) : null;
   const shadow = photo.shadow || {};
   const card = photo.card;
   const personShadow = cutout && !framed
@@ -130,7 +130,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
     ) : null;
 
   if (photo.frame === 'line-frame') {
-    const innerFit = image ? coverFit(image, box.w, box.h) : null;
+    const innerFit = image ? coverFit(image, box.w, box.h, photo.frame) : null;
     const pad = photo.inset || 16;
     return (
       <Group x={box.x} y={box.y}>
@@ -202,7 +202,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
   }
 
   if (photo.frame === 'line-frame') {
-    const innerFit = image ? coverFit(image, box.w, box.h) : null;
+    const innerFit = image ? coverFit(image, box.w, box.h, photo.frame) : null;
     const gap = photo.frameGap || 14;
     return (
       <Group x={box.x} y={box.y}>
@@ -278,7 +278,7 @@ function PhotoLayer({ photo, image, cutout = false }) {
     const tab = photo.tab || 78;
     const m = photo.matPad || 16;
     const inner = { x: m, y: m, w: box.w - m * 2, h: box.h - tab };
-    const innerFit = image ? coverFit(image, inner.w, inner.h) : null;
+    const innerFit = image ? coverFit(image, inner.w, inner.h, photo.frame) : null;
     return (
       <Group x={photo.x} y={photo.y} rotation={photo.rotation || 0} offsetX={box.w / 2} offsetY={box.h / 2}>
         <Rect

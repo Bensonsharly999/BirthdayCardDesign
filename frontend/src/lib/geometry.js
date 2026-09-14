@@ -14,21 +14,22 @@ export function colorStops(colors = []) {
   return colors.flatMap((c, i) => [i / (colors.length - 1), c]);
 }
 
-export function coverFit(image, boxW, boxH) {
+export function coverFit(image, boxW, boxH, frame) {
   const iw = image.width || 1;
   const ih = image.height || 1;
-  const scale = Math.max(boxW / iw, boxH / ih);
+  const round = frame === 'circle' || frame === 'oval';
+  const topGuard = round ? boxH * 0.08 : 0;
+  const fitH = Math.max(1, boxH - topGuard);
+  const scale = Math.max(boxW / iw, fitH / ih);
   const width = iw * scale;
   const height = ih * scale;
-  return {
-    width,
-    height,
-    x: (boxW - width) / 2,
-    y: (boxH - height) / 2,
-  };
+  const x = (boxW - width) / 2;
+  let y = topGuard + (fitH - height) / 2;
+  if (height > fitH) y = topGuard;
+  return { width, height, x, y };
 }
 
-/** Fit a cut-out person inside a frame without stretching, sitting near the bottom. */
+/** Fit a cut-out person inside a frame without stretching, keeping the head in view. */
 export function subjectFit(image, boxW, boxH, pad = 0.05) {
   const iw = image.width || 1;
   const ih = image.height || 1;
@@ -41,7 +42,7 @@ export function subjectFit(image, boxW, boxH, pad = 0.05) {
     width,
     height,
     x: (boxW - width) / 2,
-    y: Math.max(boxH * pad, boxH - height - boxH * pad * 0.35),
+    y: boxH * pad,
   };
 }
 
